@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de8kcqfvvyadr"
-valid=false
+uid="uid://clmycjuu7rhsa"
+path="res://.godot/imported/changuito2.png-c75501793f23c2f6946680c292b46724.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Assets/changuito2.png"
+dest_files=["res://.godot/imported/changuito2.png-c75501793f23c2f6946680c292b46724.ctex"]
 
 [params]
 
