@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://n8snac3ylqhf"]
+
+[ext_resource type="Script" uid="uid://c6ra34jhxunaq" path="res://scripts/button.gd" id="1_yqeox"]
+
+[node name="Menu" type="Node2D" unique_id=1749629062]
+
+[node name="Control" type="Control" parent="." unique_id=1304580646]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control" unique_id=721839798]
+layout_mode = 0
+offset_left = 466.0
+offset_top = 238.0
+offset_right = 688.0
+offset_bottom = 398.0
+text = "Empezar"
+script = ExtResource("1_yqeox")

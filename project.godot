@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="tukis"
-run/main_scene="uid://c8h7m3p1rar2s"
+run/main_scene="uid://n8snac3ylqhf"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://byd21bhfdvmc1"]
+
+[node name="Intro" type="Node2D" unique_id=420742952]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=599376162]
+
+[node name="Button" type="Button" parent="Node2D" unique_id=205998961]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Label" type="Label" parent="Node2D" unique_id=1326515953]
+offset_right = 40.0
+offset_bottom = 23.0
