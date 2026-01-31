@@ -7,6 +7,8 @@
 
 [ext_resource type="Script" path="res://scenes/level_1_controller.gd" id="1_controller"]
 
+[ext_resource type="Script" path="res://scenes/drop_zone.gd" id="4_dropzone"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gj13j"]
 size = Vector2(421.14612, 423.4181)
 
@@ -56,6 +58,19 @@ clip_children = 2
 position = Vector2(105, 15.000008)
 scale = Vector2(0.40840933, 0.47411764)
 texture = ExtResource("3_0vkk4")
+
+[node name="DropZone" type="Control" parent="Mask"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -210.0
+offset_top = -212.0
+offset_right = -210.0
+offset_bottom = -212.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_dropzone")
 
 [node name="Area2D" type="Area2D" parent="Mask"]
 position = Vector2(1, 0)

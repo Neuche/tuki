@@ -41,4 +41,7 @@ func _ready() -> void:
 	Dialogic.timeline_ended.connect(_on_dialog_ended)
 
 func _on_dialog_ended():
-	get_tree().change_scene_to_file("res://scenes/level_1.tscn")
+	if GameState.estan_completas():
+		get_tree().change_scene_to_file("res://scenes/level_complete.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/level_1.tscn")

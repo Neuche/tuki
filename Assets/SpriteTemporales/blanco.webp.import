@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dajbdoj7e04v7"
-path="res://.godot/imported/blanco.webp-1efcdf3e0bd0fc90a8b0ffcdb079c784.ctex"
+path="res://.godot/imported/blanco.webp-39111158651851636da6f4038bd28138.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpriteTemporales/blanco.webp"
-dest_files=["res://.godot/imported/blanco.webp-1efcdf3e0bd0fc90a8b0ffcdb079c784.ctex"]
+source_file="res://Assets/SpriteTemporales/blanco.webp"
+dest_files=["res://.godot/imported/blanco.webp-39111158651851636da6f4038bd28138.ctex"]
 
 [params]
 
