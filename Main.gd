@@ -6,6 +6,12 @@ func _ready():
 	$CanvasLayer/UI/Palette/StarBtn.pressed.connect(func(): spawn_decoration("res://assets/star.jpg"))
 	$CanvasLayer/UI/Palette/HeartBtn.pressed.connect(func(): spawn_decoration("res://assets/heart.jpg"))
 	$CanvasLayer/UI/Palette/DiamondBtn.pressed.connect(func(): spawn_decoration("res://assets/diamond.jpg"))
+	$CanvasLayer/UI/Palette/ResetBtn.pressed.connect(clear_decorations)
+
+func clear_decorations():
+	for child in get_children():
+		if child.has_method("_input_event"):
+			child.queue_free()
 
 func spawn_decoration(texture_path: String):
 	var deco = decoration_scene.instantiate()

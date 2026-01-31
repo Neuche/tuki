@@ -46,6 +46,10 @@ text = "Add Heart"
 layout_mode = 2
 text = "Add Diamond"
 
+[node name="ResetBtn" type="Button" parent="CanvasLayer/UI/Palette"]
+layout_mode = 2
+text = "Reset"
+
 [node name="Background" type="ColorRect" parent="CanvasLayer" unique_id=1042747421]
 anchors_preset = 15
 anchor_right = 1.0

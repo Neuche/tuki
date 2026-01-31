@@ -19,6 +19,8 @@ func _input_event(_viewport, event, _shape_idx):
 			else:
 				dragging = false
 				z_index = 0
+		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			rotation_degrees += 45
 
 func _process(_delta):
 	if dragging:
