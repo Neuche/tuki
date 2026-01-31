@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Decoration.gd" id="1_1"]
+[ext_resource type="Shader" path="res://transparency.gdshader" id="2_2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1"]
+shader = ExtResource("2_2")
+shader_parameter/key_color = Color(1, 1, 1, 1)
+shader_parameter/tolerance = 0.1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(100, 100)
+
+[node name="Decoration" type="Area2D"]
+script = ExtResource("1_1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_1")
+scale = Vector2(0.2, 0.2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1")

@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://cvw027m0s3665"]
+
+[ext_resource type="Script" uid="uid://cqg4j7arllgxq" path="res://Main.gd" id="1_1"]
+[ext_resource type="PackedScene" path="res://Decoration.tscn" id="2_2"]
+[ext_resource type="Texture2D" path="res://assets/mask.jpg" id="3_3"]
+[ext_resource type="Shader" path="res://transparency.gdshader" id="4_4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1"]
+shader = ExtResource("4_4")
+shader_parameter/key_color = Color(1, 1, 1, 1)
+shader_parameter/tolerance = 0.1
+
+[node name="Main" type="Node2D" unique_id=1954280434]
+script = ExtResource("1_1")
+decoration_scene = ExtResource("2_2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1170454571]
+layer = -1
+
+[node name="UI" type="CanvasLayer" parent="CanvasLayer" unique_id=795581756]
+
+[node name="Palette" type="HBoxContainer" parent="CanvasLayer/UI" unique_id=500618962]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -100.0
+offset_right = 200.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="StarBtn" type="Button" parent="CanvasLayer/UI/Palette" unique_id=1937455446]
+layout_mode = 2
+text = "Add Star"
+
+[node name="HeartBtn" type="Button" parent="CanvasLayer/UI/Palette" unique_id=629620768]
+layout_mode = 2
+text = "Add Heart"
+
+[node name="DiamondBtn" type="Button" parent="CanvasLayer/UI/Palette" unique_id=1599367146]
+layout_mode = 2
+text = "Add Diamond"
+
+[node name="Background" type="ColorRect" parent="CanvasLayer" unique_id=1042747421]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = 34.0
+offset_right = -4.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12, 0.12, 0.14, 1)
+
+[node name="Workbench" type="ColorRect" parent="." unique_id=1490728546]
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 1052.0
+offset_bottom = 548.0
+color = Color(0.18, 0.18, 0.2, 1)
+
+[node name="Mask" type="Sprite2D" parent="." unique_id=650723541]
+material = SubResource("ShaderMaterial_1")
+position = Vector2(585, 331)
+scale = Vector2(0.90234375, 0.44921878)
+texture = ExtResource("3_3")
