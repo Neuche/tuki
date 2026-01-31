@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c8h7m3p1rar2s"]
+
+[ext_resource type="Texture2D" uid="uid://cw4jc0yqdq4hf" path="res://Assets/changuito1.png" id="1_changuito"]
+[ext_resource type="Script" uid="uid://cxkg3kmdwq8cu" path="res://scenes/changuito_hello.gd" id="2_script"]
+
+[node name="ChanguitoHello" type="Node2D" unique_id=193051095]
+script = ExtResource("2_script")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=83143506]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=90194648]
+position = Vector2(576, 324)
+texture = ExtResource("1_changuito")
