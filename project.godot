@@ -17,7 +17,10 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+Global="*res://scripts/var_globales/global.gd"
+GameState="*res://scripts/game_state.gd"
 Dialogic="*uid://ds2q0uclmolvu"
+GameState="*res://scripts/game_state.gd"
 
 [dialogic]
 

@@ -36,3 +36,9 @@ func _ready() -> void:
 
 	# Start the dialog for the selected changuito
 	Dialogic.start(selected.timeline)
+
+	# Connect to dialog end signal
+	Dialogic.timeline_ended.connect(_on_dialog_ended)
+
+func _on_dialog_ended():
+	get_tree().change_scene_to_file("res://scenes/level_1.tscn")

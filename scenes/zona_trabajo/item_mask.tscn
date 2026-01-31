@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bljk6tnma4wi4"]
 
-[ext_resource type="Script" uid="uid://bkbmfegia8ler" path="res://Scenes/zona_trabajo/pieza_seleccion.gd" id="1_4ussw"]
-[ext_resource type="Texture2D" uid="uid://bk730g3ore8ha" path="res://SpriteTemporales/Iconos gratuitos de Serpiente diseñados por Freepik.jpg" id="2_vr8yk"]
+[ext_resource type="Script" uid="uid://bkbmfegia8ler" path="res://scenes/zona_trabajo/pieza_seleccion.gd" id="1_4ussw"]
+[ext_resource type="Texture2D" uid="uid://bk730g3ore8ha" path="res://Assets/SpriteTemporales/Iconos gratuitos de Serpiente diseñados por Freepik.jpg" id="2_vr8yk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rj0aq"]
 size = Vector2(41, 39)

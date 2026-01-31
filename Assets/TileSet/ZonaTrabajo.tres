@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cpsx5hsm42r2w"]
 
-[ext_resource type="Texture2D" uid="uid://c322rmgeyh4i1" path="res://SpriteTemporales/TILESET GRATIS MUNDOALEXO PLAY.png" id="1_8yh1g"]
+[ext_resource type="Texture2D" uid="uid://c322rmgeyh4i1" path="res://Assets/SpriteTemporales/TILESET GRATIS MUNDOALEXO PLAY.png" id="1_8yh1g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2xwv4"]
 texture = ExtResource("1_8yh1g")

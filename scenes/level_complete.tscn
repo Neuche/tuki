@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://yst88538r1jw"]
 
-[ext_resource type="Script" uid="uid://8bv36omblnbl" path="res://scripts/button_seguir.gd" id="1_hhoem"]
+[ext_resource type="Script" path="res://scripts/button_seguir.gd" id="1_hhoem"]
 
 [node name="LevelComplete" type="Node2D" unique_id=374902180]
 
@@ -24,5 +24,5 @@ offset_left = 258.0
 offset_top = 176.0
 offset_right = 815.0
 offset_bottom = 464.0
-text = "Seguir"
+text = "Start Again"
 script = ExtResource("1_hhoem")
