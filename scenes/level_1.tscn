@@ -2,19 +2,26 @@
 
 [ext_resource type="Texture2D" uid="uid://b8p5wbcmjw1ed" path="res://Assets/layout idea.png" id="1_0dl0s"]
 [ext_resource type="PackedScene" uid="uid://gr0teld4vcrv" path="res://scenes/AreaTrabajo/deco_items.tscn" id="2_kcjbq"]
-[ext_resource type="Texture2D" uid="uid://cfloqn87l3lro" path="res://Assets/big windows.png" id="3_6u6e4"]
-[ext_resource type="Texture2D" uid="uid://cv7tdwsewqs3u" path="res://Assets/mascara1.png" id="3_863jg"]
 [ext_resource type="Texture2D" uid="uid://6pxmxlxllgyj" path="res://Assets/window_mask.png" id="3_ise1y"]
 [ext_resource type="Script" uid="uid://w4mb0jcl67i2" path="res://scenes/AreaTrabajo/area_2d.gd" id="4_6u6e4"]
 [ext_resource type="Texture2D" uid="uid://c0oomv5k0df3g" path="res://Assets/window_accessories.png" id="4_w4ilm"]
 [ext_resource type="Texture2D" uid="uid://cxs3l4x33yx7l" path="res://Assets/window_colors.png" id="5_cmw7w"]
 [ext_resource type="Texture2D" uid="uid://cjaqtgyyqxkka" path="res://Assets/window_eyes.png" id="6_dvpnx"]
 [ext_resource type="Texture2D" uid="uid://d2d7sj3dcc6ym" path="res://Assets/window_mouth.png" id="7_n0u45"]
-[ext_resource type="Texture2D" uid="uid://bn0c7jg6o0ok1" path="res://Assets/Iconos gratuitos de Serpiente diseñados por Freepik.jpg" id="9_cmw7w"]
+[ext_resource type="Texture2D" uid="uid://djy2qv0rl7bhy" path="res://Assets/mascara niño.png" id="9_7nomh"]
+[ext_resource type="Texture2D" uid="uid://cy2x1jtbwiqvx" path="res://Assets/mascara adulto.png" id="10_1s4pk"]
 [ext_resource type="Script" uid="uid://dha3bhkut8533" path="res://scenes/level_1_controller.gd" id="10_ctrl"]
+[ext_resource type="Texture2D" uid="uid://db2o6rndlbbgv" path="res://Assets/mascara viejo.png" id="11_1s4pk"]
 [ext_resource type="Texture2D" uid="uid://b0urdndky5ak4" path="res://Assets/Ojitos y esas cosas/ojos1.png" id="11_ojos1"]
 [ext_resource type="Texture2D" uid="uid://d1yom0vehb2o0" path="res://Assets/Ojitos y esas cosas/ojos2.png" id="12_ojos2"]
+[ext_resource type="Texture2D" uid="uid://dnbd58fnio5ju" path="res://Assets/Plumas/pluma1.png" id="12_tr1x6"]
+[ext_resource type="Texture2D" uid="uid://bsk0ekodtg8oy" path="res://Assets/Plumas/pluma2.png" id="13_d5akn"]
 [ext_resource type="Texture2D" uid="uid://nvv3lbaaf4j6" path="res://Assets/Ojitos y esas cosas/ojos3.png" id="13_ojos3"]
+[ext_resource type="Texture2D" uid="uid://c1p1xxp71jij" path="res://Assets/Plumas/pluma3.png" id="14_wbtxt"]
+[ext_resource type="Texture2D" uid="uid://7n5bmiitu0q1" path="res://Assets/Plumas/pluma8.png" id="15_x2fux"]
+[ext_resource type="Texture2D" uid="uid://b2qdxq5pe44n7" path="res://Assets/Colores de mascaras/color_amarillo.png" id="16_s7g0b"]
+[ext_resource type="Texture2D" uid="uid://c7cgtnpvoq8d4" path="res://Assets/Colores de mascaras/color_verde.png" id="17_mmfjm"]
+[ext_resource type="Texture2D" uid="uid://b3rq2q3gwcb07" path="res://Assets/Colores de mascaras/color_rojo.png" id="18_k8ld0"]
 
 [sub_resource type="GDScript" id="GDScript_8x38w"]
 resource_name = "tabmanager"
@@ -117,7 +124,8 @@ icon = ExtResource("7_n0u45")
 [node name="panels" type="Control" parent="CanvasLayer/Control" unique_id=1089293273]
 layout_mode = 2
 
-[node name="SelectorItems" type="Panel" parent="CanvasLayer/Control/panels" unique_id=2114800080]
+[node name="mascara" type="Panel" parent="CanvasLayer/Control/panels" unique_id=2114800080]
+visible = false
 layout_mode = 0
 offset_left = 1.0
 offset_top = -12.0
@@ -125,7 +133,7 @@ offset_right = 751.0
 offset_bottom = 738.0
 size_flags_horizontal = 0
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/panels/SelectorItems" unique_id=1155170938]
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/panels/mascara" unique_id=1155170938]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -142,19 +150,49 @@ theme_override_constants/h_separation = 100
 theme_override_constants/v_separation = 100
 columns = 2
 
-[node name="DecoItems" parent="CanvasLayer/Control/panels/SelectorItems/GridContainer" unique_id=723936550 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="DecoItems" parent="CanvasLayer/Control/panels/mascara/GridContainer" unique_id=723936550 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="DecoItems2" parent="CanvasLayer/Control/panels/SelectorItems/GridContainer" unique_id=2072279201 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="deco" parent="CanvasLayer/Control/panels/mascara/GridContainer/DecoItems" index="0"]
+anchor_left = 0.08666668
+anchor_top = 0.08333334
+anchor_right = 2.7433333
+anchor_bottom = 2.68
+scale = Vector2(0.32000062, 0.32000062)
+texture = ExtResource("9_7nomh")
+
+[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/mascara/GridContainer/DecoItems/Area2D" index="0"]
+visible = false
+
+[node name="DecoItems2" parent="CanvasLayer/Control/panels/mascara/GridContainer" unique_id=2072279201 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="DecoItems3" parent="CanvasLayer/Control/panels/SelectorItems/GridContainer" unique_id=199432767 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="deco" parent="CanvasLayer/Control/panels/mascara/GridContainer/DecoItems2" index="0"]
+anchor_left = 0.15666667
+anchor_top = 0.07333333
+anchor_right = 2.3633332
+anchor_bottom = 2.7033334
+scale = Vector2(0.31999987, 0.31999987)
+texture = ExtResource("10_1s4pk")
+
+[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/mascara/GridContainer/DecoItems2/Area2D" index="0"]
+visible = false
+
+[node name="DecoItems3" parent="CanvasLayer/Control/panels/mascara/GridContainer" unique_id=199432767 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="DecoItems4" parent="CanvasLayer/Control/panels/SelectorItems/GridContainer" unique_id=1327126850 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
-layout_mode = 2
+[node name="deco" parent="CanvasLayer/Control/panels/mascara/GridContainer/DecoItems3" index="0"]
+anchor_left = 0.07
+anchor_right = 2.63
+anchor_bottom = 2.7066667
+scale = Vector2(0.32880855, 0.32880855)
+texture = ExtResource("11_1s4pk")
 
-[node name="SelectorItems2" type="Panel" parent="CanvasLayer/Control/panels" unique_id=30653223]
+[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/mascara/GridContainer/DecoItems3/Area2D" index="0"]
+visible = false
+
+[node name="plumas" type="Panel" parent="CanvasLayer/Control/panels" unique_id=30653223]
+visible = false
 layout_mode = 0
 offset_left = 1.0
 offset_top = -12.0
@@ -162,7 +200,7 @@ offset_right = 751.0
 offset_bottom = 738.0
 size_flags_horizontal = 0
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/panels/SelectorItems2" unique_id=1481644032]
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/panels/plumas" unique_id=1481644032]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -179,27 +217,55 @@ theme_override_constants/h_separation = 100
 theme_override_constants/v_separation = 100
 columns = 2
 
-[node name="DecoItems" parent="CanvasLayer/Control/panels/SelectorItems2/GridContainer" unique_id=1190189987 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="DecoItems" parent="CanvasLayer/Control/panels/plumas/GridContainer" unique_id=1190189987 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="deco" parent="CanvasLayer/Control/panels/SelectorItems2/GridContainer/DecoItems" index="0"]
-texture = ExtResource("3_6u6e4")
+[node name="deco" parent="CanvasLayer/Control/panels/plumas/GridContainer/DecoItems" index="0"]
+texture = ExtResource("12_tr1x6")
 expand_mode = 3
 
-[node name="DecoItems2" parent="CanvasLayer/Control/panels/SelectorItems2/GridContainer" unique_id=456372178 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/plumas/GridContainer/DecoItems/Area2D" index="0"]
+visible = false
+
+[node name="DecoItems2" parent="CanvasLayer/Control/panels/plumas/GridContainer" unique_id=456372178 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="deco" parent="CanvasLayer/Control/panels/SelectorItems2/GridContainer/DecoItems2" index="0"]
-texture = ExtResource("9_cmw7w")
+[node name="deco" parent="CanvasLayer/Control/panels/plumas/GridContainer/DecoItems2" index="0"]
+texture = ExtResource("13_d5akn")
 expand_mode = 3
 
-[node name="DecoItems3" parent="CanvasLayer/Control/panels/SelectorItems2/GridContainer" unique_id=2039199124 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/plumas/GridContainer/DecoItems2/Area2D" index="0"]
+visible = false
+
+[node name="DecoItems3" parent="CanvasLayer/Control/panels/plumas/GridContainer" unique_id=2039199124 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="DecoItems4" parent="CanvasLayer/Control/panels/SelectorItems2/GridContainer" unique_id=1935785878 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="deco" parent="CanvasLayer/Control/panels/plumas/GridContainer/DecoItems3" index="0"]
+anchor_left = -0.18
+anchor_top = 0.36
+anchor_right = 0.69
+anchor_bottom = 1.4766667
+rotation = -0.64327824
+texture = ExtResource("14_wbtxt")
+
+[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/plumas/GridContainer/DecoItems3/Area2D" index="0"]
+visible = false
+
+[node name="DecoItems4" parent="CanvasLayer/Control/panels/plumas/GridContainer" unique_id=1935785878 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="SelectorItems3" type="Panel" parent="CanvasLayer/Control/panels" unique_id=1270214422]
+[node name="deco" parent="CanvasLayer/Control/panels/plumas/GridContainer/DecoItems4" index="0"]
+anchor_left = -0.12666667
+anchor_top = 0.19666667
+anchor_right = 0.74333334
+anchor_bottom = 1.25
+rotation = -0.40037408
+texture = ExtResource("15_x2fux")
+
+[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/plumas/GridContainer/DecoItems4/Area2D" index="0"]
+visible = false
+
+[node name="color" type="Panel" parent="CanvasLayer/Control/panels" unique_id=1270214422]
 layout_mode = 0
 offset_left = 1.0
 offset_top = -12.0
@@ -207,7 +273,7 @@ offset_right = 751.0
 offset_bottom = 738.0
 size_flags_horizontal = 0
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/panels/SelectorItems3" unique_id=1120644597]
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/panels/color" unique_id=1120644597]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -224,19 +290,35 @@ theme_override_constants/h_separation = 100
 theme_override_constants/v_separation = 100
 columns = 2
 
-[node name="DecoItems" parent="CanvasLayer/Control/panels/SelectorItems3/GridContainer" unique_id=1490631235 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="DecoItems" parent="CanvasLayer/Control/panels/color/GridContainer" unique_id=1490631235 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="DecoItems2" parent="CanvasLayer/Control/panels/SelectorItems3/GridContainer" unique_id=1318276995 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="deco" parent="CanvasLayer/Control/panels/color/GridContainer/DecoItems" index="0"]
+texture = ExtResource("16_s7g0b")
+
+[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/color/GridContainer/DecoItems/Area2D" index="0"]
+visible = false
+
+[node name="DecoItems2" parent="CanvasLayer/Control/panels/color/GridContainer" unique_id=1318276995 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="DecoItems3" parent="CanvasLayer/Control/panels/SelectorItems3/GridContainer" unique_id=941829995 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="deco" parent="CanvasLayer/Control/panels/color/GridContainer/DecoItems2" index="0"]
+texture = ExtResource("17_mmfjm")
+
+[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/color/GridContainer/DecoItems2/Area2D" index="0"]
+visible = false
+
+[node name="DecoItems3" parent="CanvasLayer/Control/panels/color/GridContainer" unique_id=941829995 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="DecoItems4" parent="CanvasLayer/Control/panels/SelectorItems3/GridContainer" unique_id=2143655391 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
-layout_mode = 2
+[node name="deco" parent="CanvasLayer/Control/panels/color/GridContainer/DecoItems3" index="0"]
+texture = ExtResource("18_k8ld0")
 
-[node name="SelectorItems4" type="Panel" parent="CanvasLayer/Control/panels" unique_id=543823994]
+[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/color/GridContainer/DecoItems3/Area2D" index="0"]
+visible = false
+
+[node name="ojos" type="Panel" parent="CanvasLayer/Control/panels" unique_id=543823994]
+visible = false
 layout_mode = 0
 offset_left = 1.0
 offset_top = -12.0
@@ -244,7 +326,7 @@ offset_right = 751.0
 offset_bottom = 738.0
 size_flags_horizontal = 0
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/panels/SelectorItems4" unique_id=1833965510]
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/panels/ojos" unique_id=1833965510]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -261,31 +343,38 @@ theme_override_constants/h_separation = 100
 theme_override_constants/v_separation = 100
 columns = 2
 
-[node name="DecoItems" parent="CanvasLayer/Control/panels/SelectorItems4/GridContainer" unique_id=1589758843 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="DecoItems" parent="CanvasLayer/Control/panels/ojos/GridContainer" unique_id=1589758843 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="deco" parent="CanvasLayer/Control/panels/SelectorItems4/GridContainer/DecoItems" index="0"]
+[node name="deco" parent="CanvasLayer/Control/panels/ojos/GridContainer/DecoItems" index="0"]
 texture = ExtResource("11_ojos1")
 expand_mode = 1
 
-[node name="DecoItems2" parent="CanvasLayer/Control/panels/SelectorItems4/GridContainer" unique_id=1236064544 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/ojos/GridContainer/DecoItems/Area2D" index="0"]
+visible = false
+
+[node name="DecoItems2" parent="CanvasLayer/Control/panels/ojos/GridContainer" unique_id=1236064544 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="deco" parent="CanvasLayer/Control/panels/SelectorItems4/GridContainer/DecoItems2" index="0"]
+[node name="deco" parent="CanvasLayer/Control/panels/ojos/GridContainer/DecoItems2" index="0"]
 texture = ExtResource("12_ojos2")
 expand_mode = 1
 
-[node name="DecoItems3" parent="CanvasLayer/Control/panels/SelectorItems4/GridContainer" unique_id=1853575200 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/ojos/GridContainer/DecoItems2/Area2D" index="0"]
+visible = false
+
+[node name="DecoItems3" parent="CanvasLayer/Control/panels/ojos/GridContainer" unique_id=1853575200 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="deco" parent="CanvasLayer/Control/panels/SelectorItems4/GridContainer/DecoItems3" index="0"]
+[node name="deco" parent="CanvasLayer/Control/panels/ojos/GridContainer/DecoItems3" index="0"]
 texture = ExtResource("13_ojos3")
 expand_mode = 1
 
-[node name="DecoItems4" parent="CanvasLayer/Control/panels/SelectorItems4/GridContainer" unique_id=1482027198 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
-layout_mode = 2
+[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/ojos/GridContainer/DecoItems3/Area2D" index="0"]
+visible = false
 
-[node name="SelectorItems5" type="Panel" parent="CanvasLayer/Control/panels" unique_id=1167479507]
+[node name="bocas" type="Panel" parent="CanvasLayer/Control/panels" unique_id=1167479507]
+visible = false
 layout_mode = 0
 offset_left = 1.0
 offset_top = -12.0
@@ -293,7 +382,7 @@ offset_right = 751.0
 offset_bottom = 738.0
 size_flags_horizontal = 0
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/panels/SelectorItems5" unique_id=139780593]
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/panels/bocas" unique_id=139780593]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -310,22 +399,21 @@ theme_override_constants/h_separation = 100
 theme_override_constants/v_separation = 100
 columns = 2
 
-[node name="DecoItems" parent="CanvasLayer/Control/panels/SelectorItems5/GridContainer" unique_id=1730735967 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="DecoItems" parent="CanvasLayer/Control/panels/bocas/GridContainer" unique_id=1730735967 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="DecoItems2" parent="CanvasLayer/Control/panels/SelectorItems5/GridContainer" unique_id=403206726 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="DecoItems2" parent="CanvasLayer/Control/panels/bocas/GridContainer" unique_id=403206726 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="DecoItems3" parent="CanvasLayer/Control/panels/SelectorItems5/GridContainer" unique_id=130935113 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="DecoItems3" parent="CanvasLayer/Control/panels/bocas/GridContainer" unique_id=130935113 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="DecoItems4" parent="CanvasLayer/Control/panels/SelectorItems5/GridContainer" unique_id=416873400 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="DecoItems4" parent="CanvasLayer/Control/panels/bocas/GridContainer" unique_id=416873400 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
 [node name="Mask" type="Sprite2D" parent="." unique_id=961072092]
 position = Vector2(444, 80.75)
 scale = Vector2(1.0321782, 1.0681529)
-texture = ExtResource("3_863jg")
 
 [node name="Area2D" type="Area2D" parent="Mask" unique_id=1386345004]
 position = Vector2(0, -0.9361954)
@@ -342,9 +430,16 @@ shape = SubResource("CapsuleShape2D_8x38w")
 [connection signal="pressed" from="CanvasLayer/Control/HBoxContainer/Mouth" to="CanvasLayer/Control" method="_on_mouth_pressed"]
 [connection signal="area_entered" from="Mask/Area2D" to="Mask/Area2D" method="_on_area_entered"]
 
-[editable path="CanvasLayer/Control/panels/SelectorItems/GridContainer/DecoItems"]
-[editable path="CanvasLayer/Control/panels/SelectorItems2/GridContainer/DecoItems"]
-[editable path="CanvasLayer/Control/panels/SelectorItems2/GridContainer/DecoItems2"]
-[editable path="CanvasLayer/Control/panels/SelectorItems4/GridContainer/DecoItems"]
-[editable path="CanvasLayer/Control/panels/SelectorItems4/GridContainer/DecoItems2"]
-[editable path="CanvasLayer/Control/panels/SelectorItems4/GridContainer/DecoItems3"]
+[editable path="CanvasLayer/Control/panels/mascara/GridContainer/DecoItems"]
+[editable path="CanvasLayer/Control/panels/mascara/GridContainer/DecoItems2"]
+[editable path="CanvasLayer/Control/panels/mascara/GridContainer/DecoItems3"]
+[editable path="CanvasLayer/Control/panels/plumas/GridContainer/DecoItems"]
+[editable path="CanvasLayer/Control/panels/plumas/GridContainer/DecoItems2"]
+[editable path="CanvasLayer/Control/panels/plumas/GridContainer/DecoItems3"]
+[editable path="CanvasLayer/Control/panels/plumas/GridContainer/DecoItems4"]
+[editable path="CanvasLayer/Control/panels/color/GridContainer/DecoItems"]
+[editable path="CanvasLayer/Control/panels/color/GridContainer/DecoItems2"]
+[editable path="CanvasLayer/Control/panels/color/GridContainer/DecoItems3"]
+[editable path="CanvasLayer/Control/panels/ojos/GridContainer/DecoItems"]
+[editable path="CanvasLayer/Control/panels/ojos/GridContainer/DecoItems2"]
+[editable path="CanvasLayer/Control/panels/ojos/GridContainer/DecoItems3"]
