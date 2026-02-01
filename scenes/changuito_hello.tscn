@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c8h7m3p1rar2s"]
 
 [ext_resource type="Texture2D" uid="uid://dkwhymlas14ew" path="res://Assets/changuito1.png" id="1_changuito"]
-[ext_resource type="Texture2D" uid="uid://ddv47c7kndg32" path="res://Assets/tent.png" id="2_pkgjn"]
+[ext_resource type="Texture2D" uid="uid://cfs22lgq15h2f" path="res://Assets/tent.png" id="2_pkgjn"]
 [ext_resource type="Script" uid="uid://cxkg3kmdwq8cu" path="res://scenes/changuito_hello.gd" id="2_script"]
 [ext_resource type="Script" uid="uid://uxutorwfwnxl" path="res://scenes/fondo.gd" id="3_c40vs"]
 
