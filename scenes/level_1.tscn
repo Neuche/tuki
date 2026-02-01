@@ -58,6 +58,8 @@ height = 780.87286
 script = ExtResource("10_ctrl")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=854539096]
+position = Vector2(-1, 0)
+zoom = Vector2(0.6, 0.6)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1539235130]
 offset_left = -961.0
@@ -71,21 +73,21 @@ layer = 10
 follow_viewport_enabled = true
 
 [node name="TimerLabel" type="Label" parent="CanvasLayer" unique_id=315650509]
-offset_left = -920.0
-offset_top = -500.0
-offset_right = -680.0
-offset_bottom = -460.0
-theme_override_font_sizes/font_size = 24
+offset_left = 442.0
+offset_top = -523.0
+offset_right = 918.0
+offset_bottom = -443.0
+theme_override_font_sizes/font_size = 47
 text = "Tiempo restante: 10s"
 
 [node name="Control" type="VBoxContainer" parent="CanvasLayer" unique_id=891917255]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -884.0
-offset_top = -344.0
-offset_right = -2048.0
-offset_bottom = -543.0
+offset_left = -884.5
+offset_top = -336.0
+offset_right = -1281.5
+offset_bottom = -535.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 4
@@ -284,7 +286,7 @@ layout_mode = 2
 [node name="DecoItems4" parent="CanvasLayer/Control/panels/SelectorItems4/GridContainer" unique_id=1482027198 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="SelectorItems5" type="Panel" parent="CanvasLayer/Control/panels"]
+[node name="SelectorItems5" type="Panel" parent="CanvasLayer/Control/panels" unique_id=1167479507]
 layout_mode = 0
 offset_left = 1.0
 offset_top = -12.0
@@ -292,16 +294,16 @@ offset_right = 751.0
 offset_bottom = 738.0
 size_flags_horizontal = 0
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/panels/SelectorItems5"]
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/panels/SelectorItems5" unique_id=139780593]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -350.0
+offset_left = -348.0
 offset_top = -350.0
-offset_right = 350.0
+offset_right = 352.0
 offset_bottom = 350.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -309,16 +311,16 @@ theme_override_constants/h_separation = 100
 theme_override_constants/v_separation = 100
 columns = 2
 
-[node name="DecoItems" parent="CanvasLayer/Control/panels/SelectorItems5/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="DecoItems" parent="CanvasLayer/Control/panels/SelectorItems5/GridContainer" unique_id=1730735967 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="DecoItems2" parent="CanvasLayer/Control/panels/SelectorItems5/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="DecoItems2" parent="CanvasLayer/Control/panels/SelectorItems5/GridContainer" unique_id=403206726 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="DecoItems3" parent="CanvasLayer/Control/panels/SelectorItems5/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="DecoItems3" parent="CanvasLayer/Control/panels/SelectorItems5/GridContainer" unique_id=130935113 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="DecoItems4" parent="CanvasLayer/Control/panels/SelectorItems5/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="DecoItems4" parent="CanvasLayer/Control/panels/SelectorItems5/GridContainer" unique_id=416873400 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
 [node name="Mask" type="Sprite2D" parent="." unique_id=961072092]
@@ -330,7 +332,7 @@ texture = ExtResource("3_863jg")
 script = ExtResource("4_6u6e4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mask/Area2D" unique_id=1005565934]
-position = Vector2(-7.750599, 5.85122)
+position = Vector2(2.9065056, -1.6383429)
 shape = SubResource("CapsuleShape2D_8x38w")
 
 [connection signal="pressed" from="CanvasLayer/Control/HBoxContainer/Mask" to="CanvasLayer/Control" method="_on_tab_1_pressed"]
