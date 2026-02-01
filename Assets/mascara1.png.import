@@ -2,16 +2,36 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://borq25u3pfe56"
 path="res://.godot/imported/mascara1.png-47f5d99ffccf77fd34ad366b2f47619a.ctex"
+=======
+<<<<<<<< HEAD:Assets/SpriteTemporales/blanco.webp.import
+uid="uid://dajbdoj7e04v7"
+path="res://.godot/imported/blanco.webp-39111158651851636da6f4038bd28138.ctex"
+========
+uid="uid://borq25u3pfe56"
+path="res://.godot/imported/mascara1.png-47f5d99ffccf77fd34ad366b2f47619a.ctex"
+>>>>>>>> origin/put_some_glitter:put-some-glitter/Assets/mascara1.png.import
+>>>>>>> 8c222c0c233a08c2f05677327c59fe8eb9e2cda7
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
 source_file="res://Assets/mascara1.png"
 dest_files=["res://.godot/imported/mascara1.png-47f5d99ffccf77fd34ad366b2f47619a.ctex"]
+=======
+<<<<<<<< HEAD:Assets/SpriteTemporales/blanco.webp.import
+source_file="res://Assets/SpriteTemporales/blanco.webp"
+dest_files=["res://.godot/imported/blanco.webp-39111158651851636da6f4038bd28138.ctex"]
+========
+source_file="res://Assets/mascara1.png"
+dest_files=["res://.godot/imported/mascara1.png-47f5d99ffccf77fd34ad366b2f47619a.ctex"]
+>>>>>>>> origin/put_some_glitter:put-some-glitter/Assets/mascara1.png.import
+>>>>>>> 8c222c0c233a08c2f05677327c59fe8eb9e2cda7
 
 [params]
 

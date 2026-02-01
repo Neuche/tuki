@@ -1,7 +1,14 @@
+<<<<<<< HEAD:scenes/zona_trabajo/deco_items.tscn
 [gd_scene load_steps=4 format=3]
 
 [ext_resource type="Texture2D" path="res://icon.svg" id="1_7gt6r"]
 [ext_resource type="Script" path="res://scenes/zona_trabajo/deco_items.gd" id="1_j6mqg"]
+=======
+[gd_scene load_steps=4 format=3 uid="uid://gr0teld4vcrv"]
+
+[ext_resource type="Texture2D" uid="uid://cmebgcwl4pwao" path="res://icon.svg" id="1_7gt6r"]
+[ext_resource type="Script" uid="uid://0cgh7jrphchl" path="res://scenes/AreaTrabajo/deco_items.gd" id="1_j6mqg"]
+>>>>>>> 8c222c0c233a08c2f05677327c59fe8eb9e2cda7:scenes/AreaTrabajo/deco_items.tscn
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_srg2q"]
 size = Vector2(256, 256)
