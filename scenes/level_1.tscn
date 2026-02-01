@@ -22,6 +22,10 @@
 [ext_resource type="Texture2D" uid="uid://b2qdxq5pe44n7" path="res://Assets/Colores de mascaras/color_amarillo.png" id="16_s7g0b"]
 [ext_resource type="Texture2D" uid="uid://c7cgtnpvoq8d4" path="res://Assets/Colores de mascaras/color_verde.png" id="17_mmfjm"]
 [ext_resource type="Texture2D" uid="uid://b3rq2q3gwcb07" path="res://Assets/Colores de mascaras/color_rojo.png" id="18_k8ld0"]
+[ext_resource type="Texture2D" uid="uid://dirjb0vsiqyo5" path="res://Assets/Ojitos y esas cosas/boca1.png" id="22_s7g0b"]
+[ext_resource type="Texture2D" uid="uid://cuh3eq7idbvs5" path="res://Assets/Ojitos y esas cosas/boca2.png" id="23_mmfjm"]
+[ext_resource type="Texture2D" uid="uid://cvetdnulnkqgj" path="res://Assets/Ojitos y esas cosas/cuernos2.png" id="24_k8ld0"]
+[ext_resource type="Texture2D" uid="uid://cgk0ooc8kbit2" path="res://Assets/Ojitos y esas cosas/cuernos.png" id="25_mbb35"]
 
 [sub_resource type="GDScript" id="GDScript_8x38w"]
 resource_name = "tabmanager"
@@ -266,6 +270,7 @@ texture = ExtResource("15_x2fux")
 visible = false
 
 [node name="color" type="Panel" parent="CanvasLayer/Control/panels" unique_id=1270214422]
+visible = false
 layout_mode = 0
 offset_left = 1.0
 offset_top = -12.0
@@ -374,7 +379,6 @@ expand_mode = 1
 visible = false
 
 [node name="bocas" type="Panel" parent="CanvasLayer/Control/panels" unique_id=1167479507]
-visible = false
 layout_mode = 0
 offset_left = 1.0
 offset_top = -12.0
@@ -402,14 +406,58 @@ columns = 2
 [node name="DecoItems" parent="CanvasLayer/Control/panels/bocas/GridContainer" unique_id=1730735967 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
+[node name="deco" parent="CanvasLayer/Control/panels/bocas/GridContainer/DecoItems" index="0"]
+anchor_left = 0.08
+anchor_top = 0.17
+anchor_right = 1.14
+anchor_bottom = 1.04
+scale = Vector2(0.8000012, 0.8000012)
+texture = ExtResource("22_s7g0b")
+
+[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/bocas/GridContainer/DecoItems/Area2D" index="0"]
+visible = false
+
 [node name="DecoItems2" parent="CanvasLayer/Control/panels/bocas/GridContainer" unique_id=403206726 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
+
+[node name="deco" parent="CanvasLayer/Control/panels/bocas/GridContainer/DecoItems2" index="0"]
+anchor_left = 0.046666693
+anchor_top = 0.2366667
+anchor_right = 1.3066666
+anchor_bottom = 1.1066667
+scale = Vector2(0.72, 0.72)
+texture = ExtResource("23_mmfjm")
+
+[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/bocas/GridContainer/DecoItems2/Area2D" index="0"]
+visible = false
 
 [node name="DecoItems3" parent="CanvasLayer/Control/panels/bocas/GridContainer" unique_id=130935113 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
+[node name="deco" parent="CanvasLayer/Control/panels/bocas/GridContainer/DecoItems3" index="0"]
+anchor_left = 0.14666668
+anchor_top = 0.06666668
+anchor_right = 1.09
+anchor_bottom = 1.2066667
+scale = Vector2(0.72, 0.72)
+texture = ExtResource("24_k8ld0")
+
+[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/bocas/GridContainer/DecoItems3/Area2D" index="0"]
+visible = false
+
 [node name="DecoItems4" parent="CanvasLayer/Control/panels/bocas/GridContainer" unique_id=416873400 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
+
+[node name="deco" parent="CanvasLayer/Control/panels/bocas/GridContainer/DecoItems4" index="0"]
+anchor_left = 0.06666664
+anchor_top = 0.24666667
+anchor_right = 1.5333333
+anchor_bottom = 1.1166667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("25_mbb35")
+
+[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/bocas/GridContainer/DecoItems4/Area2D" index="0"]
+visible = false
 
 [node name="Mask" type="Sprite2D" parent="." unique_id=961072092]
 position = Vector2(444, 80.75)
@@ -443,3 +491,7 @@ shape = SubResource("CapsuleShape2D_8x38w")
 [editable path="CanvasLayer/Control/panels/ojos/GridContainer/DecoItems"]
 [editable path="CanvasLayer/Control/panels/ojos/GridContainer/DecoItems2"]
 [editable path="CanvasLayer/Control/panels/ojos/GridContainer/DecoItems3"]
+[editable path="CanvasLayer/Control/panels/bocas/GridContainer/DecoItems"]
+[editable path="CanvasLayer/Control/panels/bocas/GridContainer/DecoItems2"]
+[editable path="CanvasLayer/Control/panels/bocas/GridContainer/DecoItems3"]
+[editable path="CanvasLayer/Control/panels/bocas/GridContainer/DecoItems4"]
