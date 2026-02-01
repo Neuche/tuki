@@ -1,23 +1,23 @@
-extends Panel
+extends Panel 
 
-@onready var mask: TextureRect = $mask
+@onready var deco: TextureRect = $deco
 @onready var area_2d: Area2D = $Area2D
 
 
 func _get_drag_data(at_position: Vector2) -> Variant:
-	if mask.texture == null:
+	if deco.texture == null:
 		return; 
 	var preview = duplicate()
 	set_drag_preview(preview)
-	return mask
+	return deco
 	
 # Called when the node enters the scene tree for the first time.
 
 func _get_texture()-> Texture:
-	return mask.texture
+	return deco.texture
 
 func _get_texture_position() -> Vector2:
-	return mask.get_global_transform().origin
+	return deco.get_global_transform().origin
 	
 func _ready() -> void:
 	pass # Replace with function body.

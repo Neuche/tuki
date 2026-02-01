@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://gr0teld4vcrv"]
+
+[ext_resource type="Texture2D" uid="uid://cmebgcwl4pwao" path="res://icon.svg" id="1_7gt6r"]
+[ext_resource type="Script" uid="uid://0cgh7jrphchl" path="res://scenes/AreaTrabajo/deco_items.gd" id="1_j6mqg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_srg2q"]
+size = Vector2(256, 256)
+
+[node name="DecoItems" type="Panel"]
+custom_minimum_size = Vector2(300, 300)
+script = ExtResource("1_j6mqg")
+
+[node name="deco" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.053333335
+anchor_top = 0.06333333
+anchor_right = 0.92333335
+anchor_bottom = 0.93333334
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7gt6r")
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="." groups=["dropeable"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(149, 148)
+shape = SubResource("RectangleShape2D_srg2q")

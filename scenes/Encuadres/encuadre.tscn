@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://ryi522a53orl"]
-
-[ext_resource type="TileSet" uid="uid://cpsx5hsm42r2w" path="res://Assets/TileSet/ZonaTrabajo.tres" id="1_ybm6x"]
-
-[node name="Encuadre" type="TileMapLayer" unique_id=777100860]
-tile_set = ExtResource("1_ybm6x")

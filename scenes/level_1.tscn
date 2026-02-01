@@ -1,21 +1,30 @@
-[gd_scene load_steps=6 format=3 uid="uid://rsosju3en6dq"]
+[gd_scene load_steps=6 format=3 uid="uid://7sadffnbw365"]
 
-[ext_resource type="PackedScene" uid="uid://bljk6tnma4wi4" path="res://scenes/zona_trabajo/item_mask.tscn" id="1_le62x"]
-[ext_resource type="PackedScene" uid="uid://ryi522a53orl" path="res://scenes/Encuadres/encuadre.tscn" id="1_lv2te"]
-[ext_resource type="Texture2D" uid="uid://dajbdoj7e04v7" path="res://Assets/SpriteTemporales/blanco.webp" id="3_0vkk4"]
-[ext_resource type="Script" uid="uid://cqyrtimqpw4ur" path="res://scenes/zona_trabajo/area_2d.gd" id="3_rj0aq"]
+[ext_resource type="Texture2D" uid="uid://b8p5wbcmjw1ed" path="res://Assets/layout idea.png" id="1_0dl0s"]
+[ext_resource type="PackedScene" uid="uid://gr0teld4vcrv" path="res://scenes/AreaTrabajo/deco_items.tscn" id="2_kcjbq"]
+[ext_resource type="Texture2D" uid="uid://borq25u3pfe56" path="res://Assets/mascara1.png" id="3_863jg"]
+[ext_resource type="Script" uid="uid://w4mb0jcl67i2" path="res://scenes/AreaTrabajo/area_2d.gd" id="4_6u6e4"]
+[ext_resource type="Script" path="res://scenes/level_1_controller.gd" id="5_controller"]
+[ext_resource type="Script" path="res://scenes/drop_zone.gd" id="6_dropzone"]
 
-[ext_resource type="Script" path="res://scenes/level_1_controller.gd" id="1_controller"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8x38w"]
+radius = 390.43643
+height = 780.87286
 
-[ext_resource type="Script" path="res://scenes/drop_zone.gd" id="4_dropzone"]
+[node name="AreaTrabajoMask" type="Node2D"]
+script = ExtResource("5_controller")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gj13j"]
-size = Vector2(421.14612, 423.4181)
+[node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="TipoMascara" type="Node2D"]
-script = ExtResource("1_controller")
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -961.0
+offset_top = -537.0
+offset_right = 959.0
+offset_bottom = 543.0
+texture = ExtResource("1_0dl0s")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 10
 follow_viewport_enabled = true
 
 [node name="FinishButton" type="Button" parent="CanvasLayer"]
@@ -25,39 +34,46 @@ offset_right = 650.0
 offset_bottom = 300.0
 text = "Terminar"
 
-[node name="Contenedor" type="Panel" parent="CanvasLayer"]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -753.0
-offset_top = -107.0
-offset_right = -595.0
-offset_bottom = 143.0
-grow_horizontal = 2
+[node name="SelectorItems" type="Panel" parent="CanvasLayer"]
+offset_left = -883.0
+offset_top = -271.0
+offset_right = -133.0
+offset_bottom = 479.0
+size_flags_horizontal = 0
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Contenedor"]
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/SelectorItems"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -79.0
-offset_top = -125.0
-offset_right = 79.0
-offset_bottom = 125.0
+offset_left = -350.0
+offset_top = -350.0
+offset_right = 350.0
+offset_bottom = 350.0
 grow_horizontal = 2
 grow_vertical = 2
-columns = 3
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 100
+columns = 2
 
-[node name="PiezaSeleccion" parent="CanvasLayer/Contenedor/GridContainer" instance=ExtResource("1_le62x")]
+[node name="DecoItems" parent="CanvasLayer/SelectorItems/GridContainer" instance=ExtResource("2_kcjbq")]
+layout_mode = 2
+
+[node name="DecoItems2" parent="CanvasLayer/SelectorItems/GridContainer" instance=ExtResource("2_kcjbq")]
+layout_mode = 2
+
+[node name="DecoItems3" parent="CanvasLayer/SelectorItems/GridContainer" instance=ExtResource("2_kcjbq")]
+layout_mode = 2
+
+[node name="DecoItems4" parent="CanvasLayer/SelectorItems/GridContainer" instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
 [node name="Mask" type="Sprite2D" parent="."]
-clip_children = 2
-position = Vector2(105, 15.000008)
-scale = Vector2(0.40840933, 0.47411764)
-texture = ExtResource("3_0vkk4")
+position = Vector2(444, 80.75)
+scale = Vector2(1.0321782, 1.0681529)
+texture = ExtResource("3_863jg")
 
 [node name="DropZone" type="Control" parent="Mask"]
 layout_mode = 3
@@ -66,21 +82,14 @@ offset_left = -210.0
 offset_top = -210.0
 offset_right = 210.0
 offset_bottom = 210.0
-script = ExtResource("4_dropzone")
+script = ExtResource("6_dropzone")
 
 [node name="Area2D" type="Area2D" parent="Mask"]
-position = Vector2(1, 0)
-script = ExtResource("3_rj0aq")
+script = ExtResource("4_6u6e4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mask/Area2D"]
-position = Vector2(0, 1.3182144)
-shape = SubResource("RectangleShape2D_gj13j")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-
-[node name="SelecciónTipo" type="TileMapLayer" parent="."]
-
-[node name="Encuadre" parent="." instance=ExtResource("1_lv2te")]
+position = Vector2(1.9376507, -1.6383436)
+shape = SubResource("CapsuleShape2D_8x38w")
 
 [connection signal="pressed" from="CanvasLayer/FinishButton" to="." method="_on_finish_button_pressed"]
 [connection signal="area_entered" from="Mask/Area2D" to="Mask/Area2D" method="_on_area_entered"]
