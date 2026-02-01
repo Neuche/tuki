@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://7sadffnbw365"]
 
-[ext_resource type="Texture2D" uid="uid://b8p5wbcmjw1ed" path="res://Assets/layout idea.png" id="1_0dl0s"]
 [ext_resource type="PackedScene" uid="uid://gr0teld4vcrv" path="res://scenes/AreaTrabajo/deco_items.tscn" id="2_kcjbq"]
+[ext_resource type="Texture2D" uid="uid://b5n573h03c7k" path="res://Assets/madera fondo.png" id="2_s7g0b"]
 [ext_resource type="Texture2D" uid="uid://6pxmxlxllgyj" path="res://Assets/window_mask.png" id="3_ise1y"]
 [ext_resource type="Script" uid="uid://w4mb0jcl67i2" path="res://scenes/AreaTrabajo/area_2d.gd" id="4_6u6e4"]
 [ext_resource type="Texture2D" uid="uid://c0oomv5k0df3g" path="res://Assets/window_accessories.png" id="4_w4ilm"]
@@ -78,7 +78,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0dl0s")
+texture = ExtResource("2_s7g0b")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1067227685]
 layer = 10
