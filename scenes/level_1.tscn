@@ -70,7 +70,6 @@ texture = ExtResource("1_0dl0s")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1067227685]
 layer = 10
-follow_viewport_enabled = true
 
 [node name="TimerLabel" type="Label" parent="CanvasLayer" unique_id=315650509]
 offset_left = 442.0
