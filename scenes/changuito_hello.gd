@@ -200,8 +200,17 @@ func _on_gratitude_dialog_ended():
 	await get_tree().process_frame
 	await get_tree().process_frame
 
+	# Disconnect signal first
+	Dialogic.timeline_ended.disconnect(_on_gratitude_dialog_ended)
+
+	# Check if all tasks are complete - go to level complete without spawning new character
+	if GameState.estan_completas():
+		GameState.clear_mask_data()
+		get_tree().change_scene_to_file("res://scenes/level_complete.tscn")
+		return
+
 	# Wait 3 seconds
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(0.1).timeout
 
 	# Hide all masks
 	mask_overlay_adulto.visible = false
@@ -239,7 +248,6 @@ func _on_gratitude_dialog_ended():
 	GameState.clear_mask_data()
 
 	# Play new request dialog
-	Dialogic.timeline_ended.disconnect(_on_gratitude_dialog_ended)
 	Dialogic.start(new_character.timeline)
 	Dialogic.timeline_ended.connect(_on_request_dialog_ended)
 

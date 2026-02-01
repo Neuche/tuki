@@ -341,6 +341,7 @@ shape = SubResource("CapsuleShape2D_8x38w")
 [connection signal="pressed" from="CanvasLayer/Control/HBoxContainer/Eyes" to="CanvasLayer/Control" method="_on_eyes_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/HBoxContainer/Mouth" to="CanvasLayer/Control" method="_on_mouth_pressed"]
 [connection signal="area_entered" from="Mask/Area2D" to="Mask/Area2D" method="_on_area_entered"]
+[connection signal="area_exited" from="Mask/Area2D" to="Mask/Area2D" method="_on_area_exited"]
 
 [editable path="CanvasLayer/Control/panels/SelectorItems/GridContainer/DecoItems"]
 [editable path="CanvasLayer/Control/panels/SelectorItems2/GridContainer/DecoItems"]
