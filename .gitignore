@@ -2,3 +2,18 @@
 .godot/
 /android/
 *.md
+
+# Export templates and binaries
+*.exe
+*.zip
+*.pck
+*.cc
+*.apple
+*.js
+*.wasm
+*.html
+*.apk
+*.aab
+build/
+dist/
+export/
