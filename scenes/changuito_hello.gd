@@ -4,26 +4,92 @@ extends Node2D
 @onready var mask_overlay: Sprite2D = $MaskOverlay
 
 # Preload all textures at compile time
-const CHANGUITO1_TEXTURE = preload("res://Assets/changuito1.png")
-const CHANGUITO2_TEXTURE = preload("res://Assets/changuito2.png")
-const CHANGUITO3_TEXTURE = preload("res://Assets/changuito3.png")
+const ADULTO1_TEXTURE = preload("res://Assets/Changos/adulto1.png")
+const ADULTO2_TEXTURE = preload("res://Assets/Changos/adulto2.png")
+const ADULTO3_TEXTURE = preload("res://Assets/Changos/adulto3.png")
+const ADULTO4_TEXTURE = preload("res://Assets/Changos/adulto4.png")
+const ADULTO5_TEXTURE = preload("res://Assets/Changos/adulto5.png")
+const ADULTO6_TEXTURE = preload("res://Assets/Changos/adulto6.png")
+const CHICO1_TEXTURE = preload("res://Assets/Changos/chico1.png")
+const CHICO2_TEXTURE = preload("res://Assets/Changos/chico2.png")
+const CHICO3_TEXTURE = preload("res://Assets/Changos/chico3.png")
+const VIEJO1_TEXTURE = preload("res://Assets/Changos/viejo1.png")
+const VIEJO2_TEXTURE = preload("res://Assets/Changos/viejo2.png")
+const VIEJO3_TEXTURE = preload("res://Assets/Changos/viejo3.png")
 
 # Data for each changuito
 var changuitos = [
 	{
-		"character": "res://dialogic/characters/changuito.dch",
-		"timeline": "res://dialogic/timelines/hello.dtl",
-		"texture": CHANGUITO1_TEXTURE
+		"character": "res://dialogic/characters/adulto1.dch",
+		"timeline": "res://dialogic/timelines/adulto1_dialog.dtl",
+		"texture": ADULTO1_TEXTURE,
+		"type": "adulto"
 	},
 	{
-		"character": "res://dialogic/characters/changuito2.dch",
-		"timeline": "res://dialogic/timelines/changuito2_dialog.dtl",
-		"texture": CHANGUITO2_TEXTURE
+		"character": "res://dialogic/characters/adulto2.dch",
+		"timeline": "res://dialogic/timelines/adulto2_dialog.dtl",
+		"texture": ADULTO2_TEXTURE,
+		"type": "adulto"
 	},
 	{
-		"character": "res://dialogic/characters/changuito3.dch",
-		"timeline": "res://dialogic/timelines/changuito3_dialog.dtl",
-		"texture": CHANGUITO3_TEXTURE
+		"character": "res://dialogic/characters/adulto3.dch",
+		"timeline": "res://dialogic/timelines/adulto3_dialog.dtl",
+		"texture": ADULTO3_TEXTURE,
+		"type": "adulto"
+	},
+	{
+		"character": "res://dialogic/characters/adulto4.dch",
+		"timeline": "res://dialogic/timelines/adulto4_dialog.dtl",
+		"texture": ADULTO4_TEXTURE,
+		"type": "adulto"
+	},
+	{
+		"character": "res://dialogic/characters/adulto5.dch",
+		"timeline": "res://dialogic/timelines/adulto5_dialog.dtl",
+		"texture": ADULTO5_TEXTURE,
+		"type": "adulto"
+	},
+	{
+		"character": "res://dialogic/characters/adulto6.dch",
+		"timeline": "res://dialogic/timelines/adulto6_dialog.dtl",
+		"texture": ADULTO6_TEXTURE,
+		"type": "adulto"
+	},
+	{
+		"character": "res://dialogic/characters/chico1.dch",
+		"timeline": "res://dialogic/timelines/chico1_dialog.dtl",
+		"texture": CHICO1_TEXTURE,
+		"type": "chico"
+	},
+	{
+		"character": "res://dialogic/characters/chico2.dch",
+		"timeline": "res://dialogic/timelines/chico2_dialog.dtl",
+		"texture": CHICO2_TEXTURE,
+		"type": "chico"
+	},
+	{
+		"character": "res://dialogic/characters/chico3.dch",
+		"timeline": "res://dialogic/timelines/chico3_dialog.dtl",
+		"texture": CHICO3_TEXTURE,
+		"type": "chico"
+	},
+	{
+		"character": "res://dialogic/characters/viejo1.dch",
+		"timeline": "res://dialogic/timelines/viejo1_dialog.dtl",
+		"texture": VIEJO1_TEXTURE,
+		"type": "viejo"
+	},
+	{
+		"character": "res://dialogic/characters/viejo2.dch",
+		"timeline": "res://dialogic/timelines/viejo2_dialog.dtl",
+		"texture": VIEJO2_TEXTURE,
+		"type": "viejo"
+	},
+	{
+		"character": "res://dialogic/characters/viejo3.dch",
+		"timeline": "res://dialogic/timelines/viejo3_dialog.dtl",
+		"texture": VIEJO3_TEXTURE,
+		"type": "viejo"
 	}
 ]
 
@@ -42,6 +108,7 @@ func handle_request_mode():
 
 	# Store in GameState for later delivery
 	GameState.requesting_character_index = current_character_index
+	GameState.requesting_character_type = selected.type
 
 	# Show character and dialog
 	changuito_sprite.texture = selected.texture
@@ -58,11 +125,29 @@ func handle_delivery_mode() -> void:
 	var grateful_character = changuitos[current_character_index]
 	changuito_sprite.texture = grateful_character.texture
 
-	# Apply captured mask to character's face
+	# Apply captured mask to character's face with type-specific positioning
 	var mask_image = GameState.get_captured_mask()
 	if mask_image:
 		var mask_texture = ImageTexture.create_from_image(mask_image)
 		mask_overlay.texture = mask_texture
+
+		# Position mask based on character type
+		var character_type = GameState.requesting_character_type
+		match character_type:
+			"adulto":
+				mask_overlay.position = Vector2(585, 255)
+				mask_overlay.scale = Vector2(0.25, 0.25)
+			"chico":
+				mask_overlay.position = Vector2(585, 230)
+				mask_overlay.scale = Vector2(0.22, 0.22)
+			"viejo":
+				mask_overlay.position = Vector2(585, 260)
+				mask_overlay.scale = Vector2(0.26, 0.26)
+			_:
+				# Fallback to default position
+				mask_overlay.position = Vector2(585, 255)
+				mask_overlay.scale = Vector2(0.25, 0.25)
+
 		mask_overlay.visible = true
 
 	# Play gratitude dialog
@@ -81,11 +166,15 @@ func _on_gratitude_dialog_ended():
 	mask_overlay.visible = false
 
 	# Select NEW character (different from current)
-	var new_index = (current_character_index + 1 + randi() % 2) % 3
+	var new_index = current_character_index
+	while new_index == current_character_index:
+		new_index = randi() % changuitos.size()
+
 	current_character_index = new_index
 	GameState.requesting_character_index = new_index
 
 	var new_character = changuitos[new_index]
+	GameState.requesting_character_type = new_character.type
 	changuito_sprite.texture = new_character.texture
 
 	# Clear delivery mode and mask data

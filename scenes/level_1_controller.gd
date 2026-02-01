@@ -23,7 +23,7 @@ func complete_level():
 	var mask_image = await capture_mask_snapshot()
 
 	# Store in GameState with requesting character
-	GameState.store_mask_capture(mask_image, GameState.requesting_character_index)
+	GameState.store_mask_capture(mask_image, GameState.requesting_character_index, GameState.requesting_character_type)
 
 	# Increment task counter
 	GameState.incrementar_tarea()

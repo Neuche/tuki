@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cte85sccu3vrv"
+path="res://.godot/imported/Colocar Objeto (Bien).wav-ae3270d1c2b8e3fe22c76ec0b4e57580.sample"
+
+[deps]
+
+source_file="res://Assets/Colocar Objeto (Bien).wav"
+dest_files=["res://.godot/imported/Colocar Objeto (Bien).wav-ae3270d1c2b8e3fe22c76ec0b4e57580.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

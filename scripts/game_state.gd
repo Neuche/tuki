@@ -7,6 +7,7 @@ var tareas_objetivo: int = 3
 # Mask capture state
 var captured_mask_image: Image = null
 var requesting_character_index: int = -1
+var requesting_character_type: String = ""
 var is_delivery_mode: bool = false
 
 func reset_tareas():
@@ -18,9 +19,10 @@ func incrementar_tarea():
 func estan_completas() -> bool:
 	return tareas_hechas >= tareas_objetivo
 
-func store_mask_capture(image: Image, character_idx: int):
+func store_mask_capture(image: Image, character_idx: int, character_type: String = ""):
 	captured_mask_image = image
 	requesting_character_index = character_idx
+	requesting_character_type = character_type
 	is_delivery_mode = true
 
 func get_captured_mask() -> Image:
@@ -29,4 +31,5 @@ func get_captured_mask() -> Image:
 func clear_mask_data():
 	captured_mask_image = null
 	is_delivery_mode = false
+	requesting_character_type = ""
 	# Keep requesting_character_index for one more cycle

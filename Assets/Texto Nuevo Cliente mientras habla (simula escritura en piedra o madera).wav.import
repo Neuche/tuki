@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://btksawcyqx4nj"
+path="res://.godot/imported/Texto Nuevo Cliente mientras habla (simula escritura en piedra o madera).wav-5d06d3b6bdaeaa2407b4647751b7d0bf.sample"
+
+[deps]
+
+source_file="res://Assets/Texto Nuevo Cliente mientras habla (simula escritura en piedra o madera).wav"
+dest_files=["res://.godot/imported/Texto Nuevo Cliente mientras habla (simula escritura en piedra o madera).wav-5d06d3b6bdaeaa2407b4647751b7d0bf.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

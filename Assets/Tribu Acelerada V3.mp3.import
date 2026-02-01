@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ck1cjkl0n63dk"
+path="res://.godot/imported/Tribu Acelerada V3.mp3-52ef2c18fa7d75b6d0ee718beffe001e.mp3str"
+
+[deps]
+
+source_file="res://Assets/Tribu Acelerada V3.mp3"
+dest_files=["res://.godot/imported/Tribu Acelerada V3.mp3-52ef2c18fa7d75b6d0ee718beffe001e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

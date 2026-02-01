@@ -24,15 +24,33 @@ Global="*res://scripts/var_globales/global.gd"
 [dialogic]
 
 directories/dch_directory={
-"changuito": "res://dialogic/characters/changuito.dch",
-"changuito2": "res://dialogic/characters/changuito2.dch",
-"changuito3": "res://dialogic/characters/changuito3.dch"
+"adulto1": "res://dialogic/characters/adulto1.dch",
+"adulto2": "res://dialogic/characters/adulto2.dch",
+"adulto3": "res://dialogic/characters/adulto3.dch",
+"adulto4": "res://dialogic/characters/adulto4.dch",
+"adulto5": "res://dialogic/characters/adulto5.dch",
+"adulto6": "res://dialogic/characters/adulto6.dch",
+"chico1": "res://dialogic/characters/chico1.dch",
+"chico2": "res://dialogic/characters/chico2.dch",
+"chico3": "res://dialogic/characters/chico3.dch",
+"viejo1": "res://dialogic/characters/viejo1.dch",
+"viejo2": "res://dialogic/characters/viejo2.dch",
+"viejo3": "res://dialogic/characters/viejo3.dch"
 }
 directories/dtl_directory={
-"changuito2_dialog": "res://dialogic/timelines/changuito2_dialog.dtl",
-"changuito3_dialog": "res://dialogic/timelines/changuito3_dialog.dtl",
+"adulto1_dialog": "res://dialogic/timelines/adulto1_dialog.dtl",
+"adulto2_dialog": "res://dialogic/timelines/adulto2_dialog.dtl",
+"adulto3_dialog": "res://dialogic/timelines/adulto3_dialog.dtl",
+"adulto4_dialog": "res://dialogic/timelines/adulto4_dialog.dtl",
+"adulto5_dialog": "res://dialogic/timelines/adulto5_dialog.dtl",
+"adulto6_dialog": "res://dialogic/timelines/adulto6_dialog.dtl",
+"chico1_dialog": "res://dialogic/timelines/chico1_dialog.dtl",
+"chico2_dialog": "res://dialogic/timelines/chico2_dialog.dtl",
+"chico3_dialog": "res://dialogic/timelines/chico3_dialog.dtl",
 "gratitude": "res://dialogic/timelines/gratitude.dtl",
-"hello": "res://dialogic/timelines/hello.dtl"
+"viejo1_dialog": "res://dialogic/timelines/viejo1_dialog.dtl",
+"viejo2_dialog": "res://dialogic/timelines/viejo2_dialog.dtl",
+"viejo3_dialog": "res://dialogic/timelines/viejo3_dialog.dtl"
 }
 layout/default_style=""
 extensions_folder="res://addons/dialogic_additions"

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://gwhcca7iyxh6"
+path="res://.godot/imported/Abrir Pestaña en Menú.wav-30251ff6aabc334af0d969ea1735c77a.sample"
+
+[deps]
+
+source_file="res://Assets/Abrir Pestaña en Menú.wav"
+dest_files=["res://.godot/imported/Abrir Pestaña en Menú.wav-30251ff6aabc334af0d969ea1735c77a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
