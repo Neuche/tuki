@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://n8snac3ylqhf"]
 
+[ext_resource type="Texture2D" uid="uid://bvsfll41hm4b8" path="res://Assets/inicio.png" id="1_g3eks"]
 [ext_resource type="Script" uid="uid://c6ra34jhxunaq" path="res://scripts/button.gd" id="1_yqeox"]
-[ext_resource type="Texture2D" uid="uid://dkv6qggk5evnm" path="res://Assets/Menu/inicio.png" id="2_con2f"]
 [ext_resource type="Script" uid="uid://uxutorwfwnxl" path="res://scenes/fondo.gd" id="2_vjb58"]
 [ext_resource type="Texture2D" uid="uid://dlnrdypn7xuop" path="res://Assets/Menu/inicio boton inicio.png" id="3_mhnvy"]
 [ext_resource type="Texture2D" uid="uid://i4c7pf5wxhb7" path="res://Assets/Menu/inicio boton salida.png" id="5_4ytvr"]
@@ -32,7 +32,7 @@ modulate_color = Color(0.96862745, 0.83137256, 0.77254903, 1)
 [node name="Menu" type="Node2D" unique_id=1749629062]
 
 [node name="fondo_menu" type="Sprite2D" parent="." unique_id=1890317195]
-texture = ExtResource("2_con2f")
+texture = ExtResource("1_g3eks")
 script = ExtResource("2_vjb58")
 
 [node name="Control" type="Control" parent="." unique_id=1304580646]
