@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8p5wbcmjw1ed"
-path="res://.godot/imported/layout idea.png-469708ecc2b7d85177533c038179d0cb.ctex"
+uid="uid://borq25u3pfe56"
+path="res://.godot/imported/mascara1.png-47f5d99ffccf77fd34ad366b2f47619a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/layout idea.png"
-dest_files=["res://.godot/imported/layout idea.png-469708ecc2b7d85177533c038179d0cb.ctex"]
+source_file="res://Assets/mascara1.png"
+dest_files=["res://.godot/imported/mascara1.png-47f5d99ffccf77fd34ad366b2f47619a.ctex"]
 
 [params]
 
