@@ -1,8 +1,39 @@
 [gd_scene format=3 uid="uid://n8snac3ylqhf"]
 
 [ext_resource type="Script" uid="uid://c6ra34jhxunaq" path="res://scripts/button.gd" id="1_yqeox"]
+[ext_resource type="Texture2D" uid="uid://dkv6qggk5evnm" path="res://Assets/Menu/inicio.png" id="2_con2f"]
+[ext_resource type="Script" uid="uid://uxutorwfwnxl" path="res://scenes/fondo.gd" id="2_vjb58"]
+[ext_resource type="Texture2D" uid="uid://dlnrdypn7xuop" path="res://Assets/Menu/inicio boton inicio.png" id="3_mhnvy"]
+[ext_resource type="Texture2D" uid="uid://i4c7pf5wxhb7" path="res://Assets/Menu/inicio boton salida.png" id="5_4ytvr"]
+[ext_resource type="Script" uid="uid://dix4mjonijme4" path="res://scenes/button_salir.gd" id="6_g3eks"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4ytvr"]
+texture = ExtResource("3_mhnvy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_13sgg"]
+texture = ExtResource("3_mhnvy")
+modulate_color = Color(0.7058824, 0.54901963, 0.39215687, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mhnvy"]
+texture = ExtResource("3_mhnvy")
+modulate_color = Color(0.96862745, 0.83137256, 0.77254903, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g3eks"]
+texture = ExtResource("5_4ytvr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i6lef"]
+texture = ExtResource("5_4ytvr")
+modulate_color = Color(0.7058824, 0.54901963, 0.39215687, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v86rl"]
+texture = ExtResource("5_4ytvr")
+modulate_color = Color(0.96862745, 0.83137256, 0.77254903, 1)
 
 [node name="Menu" type="Node2D" unique_id=1749629062]
+
+[node name="fondo_menu" type="Sprite2D" parent="." unique_id=1890317195]
+texture = ExtResource("2_con2f")
+script = ExtResource("2_vjb58")
 
 [node name="Control" type="Control" parent="." unique_id=1304580646]
 layout_mode = 3
@@ -10,11 +41,24 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Button" type="Button" parent="Control" unique_id=721839798]
+[node name="button_inicio" type="Button" parent="Control" unique_id=721839798]
 layout_mode = 0
-offset_left = 466.0
-offset_top = 238.0
-offset_right = 688.0
-offset_bottom = 398.0
-text = "Empezar"
+offset_left = 380.0
+offset_top = 268.0
+offset_right = 765.0
+offset_bottom = 355.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_4ytvr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_13sgg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mhnvy")
 script = ExtResource("1_yqeox")
+
+[node name="button_salir" type="Button" parent="Control" unique_id=1928946652]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 423.0
+offset_right = 765.0
+offset_bottom = 510.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_g3eks")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_i6lef")
+theme_override_styles/hover = SubResource("StyleBoxTexture_v86rl")
+script = ExtResource("6_g3eks")

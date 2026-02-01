@@ -71,6 +71,10 @@ audio/channel_defaults={
 layout/style_list=[]
 layout/style_directory={}
 
+[display]
+
+window/stretch/mode="viewport"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
