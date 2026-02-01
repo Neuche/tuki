@@ -32,6 +32,7 @@ modulate_color = Color(0.96862745, 0.83137256, 0.77254903, 1)
 [node name="Menu" type="Node2D" unique_id=1749629062]
 
 [node name="fondo_menu" type="Sprite2D" parent="." unique_id=1890317195]
+position = Vector2(964, 537)
 texture = ExtResource("1_g3eks")
 script = ExtResource("2_vjb58")
 
@@ -43,10 +44,10 @@ offset_bottom = 40.0
 
 [node name="button_inicio" type="Button" parent="Control" unique_id=721839798]
 layout_mode = 0
-offset_left = 380.0
-offset_top = 268.0
-offset_right = 765.0
-offset_bottom = 355.0
+offset_left = 753.0
+offset_top = 289.0
+offset_right = 1138.0
+offset_bottom = 376.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_4ytvr")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_13sgg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_mhnvy")
@@ -54,10 +55,10 @@ script = ExtResource("1_yqeox")
 
 [node name="button_salir" type="Button" parent="Control" unique_id=1928946652]
 layout_mode = 0
-offset_left = 380.0
-offset_top = 423.0
-offset_right = 765.0
-offset_bottom = 510.0
+offset_left = 753.0
+offset_top = 444.0
+offset_right = 1138.0
+offset_bottom = 531.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_g3eks")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_i6lef")
 theme_override_styles/hover = SubResource("StyleBoxTexture_v86rl")

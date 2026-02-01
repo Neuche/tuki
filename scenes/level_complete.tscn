@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://yst88538r1jw"]
 
-[ext_resource type="Script" path="res://scripts/button_seguir.gd" id="1_hhoem"]
+[ext_resource type="Script" uid="uid://cah3ii58e2afg" path="res://scripts/button_seguir.gd" id="1_hhoem"]
 
 [node name="LevelComplete" type="Node2D" unique_id=374902180]
 
@@ -12,17 +12,17 @@ offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="Control" unique_id=51607875]
 layout_mode = 0
-offset_left = 471.0
-offset_top = 119.0
-offset_right = 609.0
-offset_bottom = 142.0
+offset_left = 937.0
+offset_top = 275.0
+offset_right = 1075.0
+offset_bottom = 298.0
 text = "Nivel Completado"
 
 [node name="Button" type="Button" parent="Control" unique_id=69489996]
 layout_mode = 0
-offset_left = 258.0
-offset_top = 176.0
-offset_right = 815.0
-offset_bottom = 464.0
+offset_left = 730.0
+offset_top = 423.0
+offset_right = 1287.0
+offset_bottom = 711.0
 text = "Start Again"
 script = ExtResource("1_hhoem")

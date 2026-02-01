@@ -14,15 +14,15 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 
 [node name="Fondo" type="Sprite2D" parent="." unique_id=1216957233]
+position = Vector2(960, 536)
 texture = ExtResource("2_pkgjn")
 script = ExtResource("3_c40vs")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=90194648]
-position = Vector2(822, 552)
-scale = Vector2(0.6, 0.6)
+position = Vector2(544.80005, 611.7)
+scale = Vector2(1.3441179, 1.3125522)
 texture = ExtResource("1_changuito")
 
 [node name="MaskOverlay" type="Sprite2D" parent="." unique_id=1194571008]
-visible = false
 position = Vector2(585, 255)
 scale = Vector2(0.25, 0.25)
