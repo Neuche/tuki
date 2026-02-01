@@ -1,14 +1,21 @@
 [gd_scene format=3 uid="uid://c8h7m3p1rar2s"]
 
 [ext_resource type="Texture2D" uid="uid://dkwhymlas14ew" path="res://Assets/changuito1.png" id="1_changuito"]
+[ext_resource type="Texture2D" uid="uid://ddv47c7kndg32" path="res://Assets/tent.png" id="2_pkgjn"]
 [ext_resource type="Script" uid="uid://cxkg3kmdwq8cu" path="res://scenes/changuito_hello.gd" id="2_script"]
+[ext_resource type="Script" uid="uid://uxutorwfwnxl" path="res://scenes/fondo.gd" id="3_c40vs"]
 
 [node name="ChanguitoHello" type="Node2D" unique_id=193051095]
 script = ExtResource("2_script")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=83143506]
+visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
+
+[node name="Fondo" type="Sprite2D" parent="." unique_id=1216957233]
+texture = ExtResource("2_pkgjn")
+script = ExtResource("3_c40vs")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=90194648]
 position = Vector2(822, 552)
