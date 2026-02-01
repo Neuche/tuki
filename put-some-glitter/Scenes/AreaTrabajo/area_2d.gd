@@ -10,7 +10,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_area_entered(drageable: Area2D) -> void:
-	if drageable.is_in_group("dropable"):
+	if drageable.is_in_group("dropeable"):
 		current_drageable = drageable
 		print("te vi")
 	pass # Replace with function body.

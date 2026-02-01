@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk730g3ore8ha"
-path="res://.godot/imported/Iconos gratuitos de Serpiente diseñados por Freepik.jpg-8c7ecdca5d73aaf93b7bf800e522d94e.ctex"
+uid="uid://dspok4j1oqb2l"
+path="res://.godot/imported/big windows.png-88f31284002014fb4dd57c3cd21e6e71.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpriteTemporales/Iconos gratuitos de Serpiente diseñados por Freepik.jpg"
-dest_files=["res://.godot/imported/Iconos gratuitos de Serpiente diseñados por Freepik.jpg-8c7ecdca5d73aaf93b7bf800e522d94e.ctex"]
+source_file="res://Assets/big windows.png"
+dest_files=["res://.godot/imported/big windows.png-88f31284002014fb4dd57c3cd21e6e71.ctex"]
 
 [params]
 
