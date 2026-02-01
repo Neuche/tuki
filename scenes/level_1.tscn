@@ -12,6 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://d2d7sj3dcc6ym" path="res://Assets/window_mouth.png" id="7_n0u45"]
 [ext_resource type="Texture2D" uid="uid://bn0c7jg6o0ok1" path="res://Assets/Iconos gratuitos de Serpiente diseñados por Freepik.jpg" id="9_cmw7w"]
 [ext_resource type="Script" uid="uid://dha3bhkut8533" path="res://scenes/level_1_controller.gd" id="10_ctrl"]
+[ext_resource type="Texture2D" uid="uid://b0urdndky5ak4" path="res://Assets/Ojitos y esas cosas/ojos1.png" id="11_ojos1"]
+[ext_resource type="Texture2D" uid="uid://d1yom0vehb2o0" path="res://Assets/Ojitos y esas cosas/ojos2.png" id="12_ojos2"]
+[ext_resource type="Texture2D" uid="uid://nvv3lbaaf4j6" path="res://Assets/Ojitos y esas cosas/ojos3.png" id="13_ojos3"]
 
 [sub_resource type="GDScript" id="GDScript_8x38w"]
 resource_name = "tabmanager"
@@ -262,18 +265,22 @@ columns = 2
 layout_mode = 2
 
 [node name="deco" parent="CanvasLayer/Control/panels/SelectorItems4/GridContainer/DecoItems" index="0"]
-texture = ExtResource("3_6u6e4")
-expand_mode = 3
+texture = ExtResource("11_ojos1")
+expand_mode = 1
 
 [node name="DecoItems2" parent="CanvasLayer/Control/panels/SelectorItems4/GridContainer" unique_id=1236064544 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
 [node name="deco" parent="CanvasLayer/Control/panels/SelectorItems4/GridContainer/DecoItems2" index="0"]
-texture = ExtResource("9_cmw7w")
-expand_mode = 3
+texture = ExtResource("12_ojos2")
+expand_mode = 1
 
 [node name="DecoItems3" parent="CanvasLayer/Control/panels/SelectorItems4/GridContainer" unique_id=1853575200 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
+
+[node name="deco" parent="CanvasLayer/Control/panels/SelectorItems4/GridContainer/DecoItems3" index="0"]
+texture = ExtResource("13_ojos3")
+expand_mode = 1
 
 [node name="DecoItems4" parent="CanvasLayer/Control/panels/SelectorItems4/GridContainer" unique_id=1482027198 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
@@ -340,3 +347,4 @@ shape = SubResource("CapsuleShape2D_8x38w")
 [editable path="CanvasLayer/Control/panels/SelectorItems2/GridContainer/DecoItems2"]
 [editable path="CanvasLayer/Control/panels/SelectorItems4/GridContainer/DecoItems"]
 [editable path="CanvasLayer/Control/panels/SelectorItems4/GridContainer/DecoItems2"]
+[editable path="CanvasLayer/Control/panels/SelectorItems4/GridContainer/DecoItems3"]
