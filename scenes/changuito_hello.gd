@@ -1,7 +1,11 @@
 extends Node2D
 
-@onready var changuito_sprite = $Sprite2D
-@onready var mask_overlay: Sprite2D = $MaskOverlay
+@onready var sprite_adulto: Sprite2D = $Sprite2DAdulto
+@onready var sprite_chico: Sprite2D = $Sprite2DChico
+@onready var sprite_viejo: Sprite2D = $Sprite2DViejo
+@onready var mask_overlay_adulto: Sprite2D = $MaskOverlayAdulto
+@onready var mask_overlay_chico: Sprite2D = $MaskOverlayChico
+@onready var mask_overlay_viejo: Sprite2D = $MaskOverlayViejo
 
 # Preload all textures at compile time
 const ADULTO1_TEXTURE = preload("res://Assets/Changos/adulto1.png")
@@ -96,6 +100,11 @@ var changuitos = [
 var current_character_index: int = -1
 
 func _ready() -> void:
+	# Debug: Print mask overlay positions
+	print("MaskOverlayAdulto position: ", mask_overlay_adulto.position)
+	print("MaskOverlayChico position: ", mask_overlay_chico.position)
+	print("MaskOverlayViejo position: ", mask_overlay_viejo.position)
+
 	if GameState.is_delivery_mode:
 		handle_delivery_mode()
 	else:
@@ -110,8 +119,21 @@ func handle_request_mode():
 	GameState.requesting_character_index = current_character_index
 	GameState.requesting_character_type = selected.type
 
-	# Show character and dialog
-	changuito_sprite.texture = selected.texture
+	# Show only the sprite for the character type
+	sprite_adulto.visible = false
+	sprite_chico.visible = false
+	sprite_viejo.visible = false
+
+	match selected.type:
+		"adulto":
+			sprite_adulto.texture = selected.texture
+			sprite_adulto.visible = true
+		"chico":
+			sprite_chico.texture = selected.texture
+			sprite_chico.visible = true
+		"viejo":
+			sprite_viejo.texture = selected.texture
+			sprite_viejo.visible = true
 
 	# Start the dialog for the selected changuito
 	Dialogic.start(selected.timeline)
@@ -123,32 +145,49 @@ func handle_delivery_mode() -> void:
 	# Show the character who requested the mask
 	current_character_index = GameState.requesting_character_index
 	var grateful_character = changuitos[current_character_index]
-	changuito_sprite.texture = grateful_character.texture
 
-	# Apply captured mask to character's face with type-specific positioning
+	# Show only the sprite for the character type
+	sprite_adulto.visible = false
+	sprite_chico.visible = false
+	sprite_viejo.visible = false
+
+	match grateful_character.type:
+		"adulto":
+			sprite_adulto.texture = grateful_character.texture
+			sprite_adulto.visible = true
+		"chico":
+			sprite_chico.texture = grateful_character.texture
+			sprite_chico.visible = true
+		"viejo":
+			sprite_viejo.texture = grateful_character.texture
+			sprite_viejo.visible = true
+
+	# Apply captured mask to character's face - show only the type-specific overlay
 	var mask_image = GameState.get_captured_mask()
 	if mask_image:
 		var mask_texture = ImageTexture.create_from_image(mask_image)
-		mask_overlay.texture = mask_texture
 
-		# Position mask based on character type
+		# Hide all overlays first
+		mask_overlay_adulto.visible = false
+		mask_overlay_chico.visible = false
+		mask_overlay_viejo.visible = false
+
+		# Show only the overlay for the character type
 		var character_type = GameState.requesting_character_type
 		match character_type:
 			"adulto":
-				mask_overlay.position = Vector2(585, 255)
-				mask_overlay.scale = Vector2(0.25, 0.25)
+				mask_overlay_adulto.texture = mask_texture
+				mask_overlay_adulto.visible = true
 			"chico":
-				mask_overlay.position = Vector2(585, 230)
-				mask_overlay.scale = Vector2(0.22, 0.22)
+				mask_overlay_chico.texture = mask_texture
+				mask_overlay_chico.visible = true
 			"viejo":
-				mask_overlay.position = Vector2(585, 260)
-				mask_overlay.scale = Vector2(0.26, 0.26)
+				mask_overlay_viejo.texture = mask_texture
+				mask_overlay_viejo.visible = true
 			_:
-				# Fallback to default position
-				mask_overlay.position = Vector2(585, 255)
-				mask_overlay.scale = Vector2(0.25, 0.25)
-
-		mask_overlay.visible = true
+				# Fallback to adulto
+				mask_overlay_adulto.texture = mask_texture
+				mask_overlay_adulto.visible = true
 
 	# Play gratitude dialog
 	Dialogic.start("res://dialogic/timelines/gratitude.dtl")
@@ -162,8 +201,10 @@ func _on_gratitude_dialog_ended():
 	# Wait 3 seconds
 	await get_tree().create_timer(3.0).timeout
 
-	# Hide mask
-	mask_overlay.visible = false
+	# Hide all masks
+	mask_overlay_adulto.visible = false
+	mask_overlay_chico.visible = false
+	mask_overlay_viejo.visible = false
 
 	# Select NEW character (different from current)
 	var new_index = current_character_index
@@ -175,7 +216,22 @@ func _on_gratitude_dialog_ended():
 
 	var new_character = changuitos[new_index]
 	GameState.requesting_character_type = new_character.type
-	changuito_sprite.texture = new_character.texture
+
+	# Show only the sprite for the new character type
+	sprite_adulto.visible = false
+	sprite_chico.visible = false
+	sprite_viejo.visible = false
+
+	match new_character.type:
+		"adulto":
+			sprite_adulto.texture = new_character.texture
+			sprite_adulto.visible = true
+		"chico":
+			sprite_chico.texture = new_character.texture
+			sprite_chico.visible = true
+		"viejo":
+			sprite_viejo.texture = new_character.texture
+			sprite_viejo.visible = true
 
 	# Clear delivery mode and mask data
 	GameState.clear_mask_data()

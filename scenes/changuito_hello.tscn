@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://c8h7m3p1rar2s"]
 
-[ext_resource type="Texture2D" uid="uid://dkwhymlas14ew" path="res://Assets/changuito1.png" id="1_changuito"]
 [ext_resource type="Texture2D" uid="uid://cfs22lgq15h2f" path="res://Assets/tent.png" id="2_pkgjn"]
 [ext_resource type="Script" uid="uid://cxkg3kmdwq8cu" path="res://scenes/changuito_hello.gd" id="2_script"]
 [ext_resource type="Script" uid="uid://uxutorwfwnxl" path="res://scenes/fondo.gd" id="3_c40vs"]
@@ -18,11 +17,26 @@ position = Vector2(960, 536)
 texture = ExtResource("2_pkgjn")
 script = ExtResource("3_c40vs")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=90194648]
-position = Vector2(544.80005, 611.7)
-scale = Vector2(1.3441179, 1.3125522)
-texture = ExtResource("1_changuito")
+[node name="Sprite2DAdulto" type="Sprite2D" parent="." unique_id=90194648]
+position = Vector2(603, 674)
+scale = Vector2(0.8, 0.8)
 
-[node name="MaskOverlay" type="Sprite2D" parent="." unique_id=1194571008]
-position = Vector2(585, 255)
-scale = Vector2(0.25, 0.25)
+[node name="Sprite2DChico" type="Sprite2D" parent="." unique_id=90194649]
+position = Vector2(603, 674)
+scale = Vector2(0.8, 0.8)
+
+[node name="Sprite2DViejo" type="Sprite2D" parent="." unique_id=90194650]
+position = Vector2(603, 674)
+scale = Vector2(0.8, 0.8)
+
+[node name="MaskOverlayAdulto" type="Sprite2D" parent="." unique_id=1194571008]
+position = Vector2(593, 475)
+scale = Vector2(0.6, 0.6)
+
+[node name="MaskOverlayChico" type="Sprite2D" parent="." unique_id=1194571009]
+position = Vector2(521, 574)
+scale = Vector2(0.5, 0.5)
+
+[node name="MaskOverlayViejo" type="Sprite2D" parent="." unique_id=1194571010]
+position = Vector2(691, 514)
+scale = Vector2(0.6, 0.6)
