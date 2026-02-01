@@ -31,6 +31,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "changuito2_dialog": "res://dialogic/timelines/changuito2_dialog.dtl",
 "changuito3_dialog": "res://dialogic/timelines/changuito3_dialog.dtl",
+"gratitude": "res://dialogic/timelines/gratitude.dtl",
 "hello": "res://dialogic/timelines/hello.dtl"
 }
 layout/default_style=""

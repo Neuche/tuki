@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3]
+[gd_scene load_steps=11 format=3]
 
 [ext_resource type="Texture2D" path="res://Assets/layout idea.png" id="1_0dl0s"]
 [ext_resource type="PackedScene" path="res://scenes/AreaTrabajo/deco_items.tscn" id="2_kcjbq"]
@@ -8,12 +8,14 @@
 [ext_resource type="Texture2D" path="res://Assets/window_colors.png" id="6_col"]
 [ext_resource type="Texture2D" path="res://Assets/window_eyes.png" id="7_eye"]
 [ext_resource type="Texture2D" path="res://Assets/big windows.png" id="8_win"]
+[ext_resource type="Script" path="res://scenes/level_1_controller.gd" id="9_ctrl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8x38w"]
 radius = 390.43643
 height = 780.87286
 
 [node name="AreaTrabajoMask" type="Node2D"]
+script = ExtResource("9_ctrl")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.5, 0.5)
@@ -28,6 +30,14 @@ texture = ExtResource("1_0dl0s")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 10
 follow_viewport_enabled = true
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer"]
+offset_left = -920.0
+offset_top = -500.0
+offset_right = -680.0
+offset_bottom = -460.0
+theme_override_font_sizes/font_size = 24
+text = "Tiempo restante: 10s"
 
 [node name="SelectorItems" type="Panel" parent="CanvasLayer"]
 offset_left = -883.0
