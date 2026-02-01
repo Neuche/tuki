@@ -100,6 +100,8 @@ var changuitos = [
 var current_character_index: int = -1
 
 func _ready() -> void:
+	AudioManager.play_gameplay_music()
+
 	# Debug: Print mask overlay positions
 	print("MaskOverlayAdulto position: ", mask_overlay_adulto.position)
 	print("MaskOverlayChico position: ", mask_overlay_chico.position)

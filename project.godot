@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Dialogic="*uid://ds2q0uclmolvu"
 GameState="*res://scripts/game_state.gd"
 Global="*res://scripts/var_globales/global.gd"
+AudioManager="*res://scripts/audio_manager.gd"
 
 [dialogic]
 

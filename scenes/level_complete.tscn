@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://yst88538r1jw"]
 
 [ext_resource type="Script" uid="uid://cah3ii58e2afg" path="res://scripts/button_seguir.gd" id="1_hhoem"]
+[ext_resource type="Script" path="res://scenes/level_complete.gd" id="2_lvlcmp"]
 
 [node name="LevelComplete" type="Node2D" unique_id=374902180]
+script = ExtResource("2_lvlcmp")
 
 [node name="Control" type="Control" parent="." unique_id=994688184]
 layout_mode = 3
