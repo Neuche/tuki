@@ -6,10 +6,12 @@ extends Panel
 @onready var area_2d: Area2D = $Area2D
 
 
-func _get_drag_data(at_position: Vector2) -> Variant:
+func _get_drag_data(_at_position: Vector2) -> Variant:
 	if deco.texture == null:
-		return; 
-	var preview = duplicate()
+		return;
+	var preview = TextureRect.new()
+	preview.texture = deco.texture
+	preview.size = deco.size
 	set_drag_preview(preview)
 	return deco
 	
@@ -27,5 +29,5 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
