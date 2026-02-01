@@ -2,13 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:addons/dialogic/Editor/Images/Resources/timeline.svg.import
-uid="uid://j7ym07anlusi"
+uid="uid://dx7jtp50lwct2"
 path="res://.godot/imported/timeline.svg-4b0b3233c6ce249f8277502cd9b13eaf.ctex"
-========
-uid="uid://cmebgcwl4pwao"
-path="res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
->>>>>>>> origin/put_some_glitter:put-some-glitter/icon.svg.import
 metadata={
 "vram_texture": false
 }

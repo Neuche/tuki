@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=10 format=3]
 
 [ext_resource type="Texture2D" path="res://Assets/layout idea.png" id="1_0dl0s"]
 [ext_resource type="PackedScene" path="res://scenes/AreaTrabajo/deco_items.tscn" id="2_kcjbq"]
 [ext_resource type="Texture2D" path="res://Assets/mascara1.png" id="3_863jg"]
 [ext_resource type="Script" path="res://scenes/AreaTrabajo/area_2d.gd" id="4_6u6e4"]
+[ext_resource type="Texture2D" path="res://Assets/window_accessories.png" id="5_acc"]
+[ext_resource type="Texture2D" path="res://Assets/window_colors.png" id="6_col"]
+[ext_resource type="Texture2D" path="res://Assets/window_eyes.png" id="7_eye"]
+[ext_resource type="Texture2D" path="res://Assets/big windows.png" id="8_win"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8x38w"]
 radius = 390.43643
@@ -51,15 +55,19 @@ columns = 2
 
 [node name="DecoItems" parent="CanvasLayer/SelectorItems/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
+item_texture = ExtResource("5_acc")
 
 [node name="DecoItems2" parent="CanvasLayer/SelectorItems/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
+item_texture = ExtResource("6_col")
 
 [node name="DecoItems3" parent="CanvasLayer/SelectorItems/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
+item_texture = ExtResource("7_eye")
 
 [node name="DecoItems4" parent="CanvasLayer/SelectorItems/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
+item_texture = ExtResource("8_win")
 
 [node name="Mask" type="Sprite2D" parent="."]
 position = Vector2(444, 80.75)

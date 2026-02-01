@@ -1,4 +1,6 @@
-extends Panel 
+extends Panel
+
+@export var item_texture: Texture2D
 
 @onready var deco: TextureRect = $deco
 @onready var area_2d: Area2D = $Area2D
@@ -20,7 +22,8 @@ func _get_texture_position() -> Vector2:
 	return deco.get_global_transform().origin
 	
 func _ready() -> void:
-	pass # Replace with function body.
+	if item_texture:
+		deco.texture = item_texture
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
