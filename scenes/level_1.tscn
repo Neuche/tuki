@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://7sadffnbw365"]
 
-[ext_resource type="PackedScene" uid="uid://gr0teld4vcrv" path="res://scenes/AreaTrabajo/deco_items.tscn" id="2_kcjbq"]
+[ext_resource type="PackedScene" uid="uid://gr0teld4vcrv" path="res://scenes/deco_items.tscn" id="2_kcjbq"]
 [ext_resource type="Texture2D" uid="uid://b5n573h03c7k" path="res://Assets/madera fondo.png" id="2_s7g0b"]
 [ext_resource type="Texture2D" uid="uid://6pxmxlxllgyj" path="res://Assets/window_mask.png" id="3_ise1y"]
-[ext_resource type="Script" uid="uid://w4mb0jcl67i2" path="res://scenes/AreaTrabajo/area_2d.gd" id="4_6u6e4"]
+[ext_resource type="Script" uid="uid://w4mb0jcl67i2" path="res://scenes/area_2d.gd" id="4_6u6e4"]
 [ext_resource type="Texture2D" uid="uid://c0oomv5k0df3g" path="res://Assets/window_accessories.png" id="4_w4ilm"]
 [ext_resource type="Texture2D" uid="uid://cxs3l4x33yx7l" path="res://Assets/window_colors.png" id="5_cmw7w"]
 [ext_resource type="Texture2D" uid="uid://cjaqtgyyqxkka" path="res://Assets/window_eyes.png" id="6_dvpnx"]
@@ -156,6 +156,7 @@ columns = 2
 
 [node name="DecoItems" parent="CanvasLayer/Control/panels/mascara/GridContainer" unique_id=723936550 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
+is_base_mask = true
 
 [node name="deco" parent="CanvasLayer/Control/panels/mascara/GridContainer/DecoItems" index="0"]
 anchor_left = 0.08666668
@@ -165,11 +166,9 @@ anchor_bottom = 2.68
 scale = Vector2(0.32000062, 0.32000062)
 texture = ExtResource("9_7nomh")
 
-[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/mascara/GridContainer/DecoItems/Area2D" index="0"]
-visible = false
-
 [node name="DecoItems2" parent="CanvasLayer/Control/panels/mascara/GridContainer" unique_id=2072279201 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
+is_base_mask = true
 
 [node name="deco" parent="CanvasLayer/Control/panels/mascara/GridContainer/DecoItems2" index="0"]
 anchor_left = 0.15666667
@@ -179,11 +178,9 @@ anchor_bottom = 2.7033334
 scale = Vector2(0.31999987, 0.31999987)
 texture = ExtResource("10_1s4pk")
 
-[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/mascara/GridContainer/DecoItems2/Area2D" index="0"]
-visible = false
-
 [node name="DecoItems3" parent="CanvasLayer/Control/panels/mascara/GridContainer" unique_id=199432767 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
+is_base_mask = true
 
 [node name="deco" parent="CanvasLayer/Control/panels/mascara/GridContainer/DecoItems3" index="0"]
 anchor_left = 0.07
@@ -192,11 +189,7 @@ anchor_bottom = 2.7066667
 scale = Vector2(0.32880855, 0.32880855)
 texture = ExtResource("11_1s4pk")
 
-[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/mascara/GridContainer/DecoItems3/Area2D" index="0"]
-visible = false
-
 [node name="plumas" type="Panel" parent="CanvasLayer/Control/panels" unique_id=30653223]
-visible = false
 layout_mode = 0
 offset_left = 1.0
 offset_top = -12.0
@@ -228,18 +221,12 @@ layout_mode = 2
 texture = ExtResource("12_tr1x6")
 expand_mode = 3
 
-[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/plumas/GridContainer/DecoItems/Area2D" index="0"]
-visible = false
-
 [node name="DecoItems2" parent="CanvasLayer/Control/panels/plumas/GridContainer" unique_id=456372178 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
 [node name="deco" parent="CanvasLayer/Control/panels/plumas/GridContainer/DecoItems2" index="0"]
 texture = ExtResource("13_d5akn")
 expand_mode = 3
-
-[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/plumas/GridContainer/DecoItems2/Area2D" index="0"]
-visible = false
 
 [node name="DecoItems3" parent="CanvasLayer/Control/panels/plumas/GridContainer" unique_id=2039199124 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
@@ -252,9 +239,6 @@ anchor_bottom = 1.4766667
 rotation = -0.64327824
 texture = ExtResource("14_wbtxt")
 
-[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/plumas/GridContainer/DecoItems3/Area2D" index="0"]
-visible = false
-
 [node name="DecoItems4" parent="CanvasLayer/Control/panels/plumas/GridContainer" unique_id=1935785878 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
@@ -266,11 +250,7 @@ anchor_bottom = 1.25
 rotation = -0.40037408
 texture = ExtResource("15_x2fux")
 
-[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/plumas/GridContainer/DecoItems4/Area2D" index="0"]
-visible = false
-
 [node name="color" type="Panel" parent="CanvasLayer/Control/panels" unique_id=1270214422]
-visible = false
 layout_mode = 0
 offset_left = 1.0
 offset_top = -12.0
@@ -301,17 +281,11 @@ layout_mode = 2
 [node name="deco" parent="CanvasLayer/Control/panels/color/GridContainer/DecoItems" index="0"]
 texture = ExtResource("16_s7g0b")
 
-[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/color/GridContainer/DecoItems/Area2D" index="0"]
-visible = false
-
 [node name="DecoItems2" parent="CanvasLayer/Control/panels/color/GridContainer" unique_id=1318276995 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
 [node name="deco" parent="CanvasLayer/Control/panels/color/GridContainer/DecoItems2" index="0"]
 texture = ExtResource("17_mmfjm")
-
-[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/color/GridContainer/DecoItems2/Area2D" index="0"]
-visible = false
 
 [node name="DecoItems3" parent="CanvasLayer/Control/panels/color/GridContainer" unique_id=941829995 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
@@ -319,11 +293,7 @@ layout_mode = 2
 [node name="deco" parent="CanvasLayer/Control/panels/color/GridContainer/DecoItems3" index="0"]
 texture = ExtResource("18_k8ld0")
 
-[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/color/GridContainer/DecoItems3/Area2D" index="0"]
-visible = false
-
 [node name="ojos" type="Panel" parent="CanvasLayer/Control/panels" unique_id=543823994]
-visible = false
 layout_mode = 0
 offset_left = 1.0
 offset_top = -12.0
@@ -355,9 +325,6 @@ layout_mode = 2
 texture = ExtResource("11_ojos1")
 expand_mode = 1
 
-[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/ojos/GridContainer/DecoItems/Area2D" index="0"]
-visible = false
-
 [node name="DecoItems2" parent="CanvasLayer/Control/panels/ojos/GridContainer" unique_id=1236064544 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
@@ -365,18 +332,12 @@ layout_mode = 2
 texture = ExtResource("12_ojos2")
 expand_mode = 1
 
-[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/ojos/GridContainer/DecoItems2/Area2D" index="0"]
-visible = false
-
 [node name="DecoItems3" parent="CanvasLayer/Control/panels/ojos/GridContainer" unique_id=1853575200 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
 [node name="deco" parent="CanvasLayer/Control/panels/ojos/GridContainer/DecoItems3" index="0"]
 texture = ExtResource("13_ojos3")
 expand_mode = 1
-
-[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/ojos/GridContainer/DecoItems3/Area2D" index="0"]
-visible = false
 
 [node name="bocas" type="Panel" parent="CanvasLayer/Control/panels" unique_id=1167479507]
 layout_mode = 0
@@ -414,9 +375,6 @@ anchor_bottom = 1.04
 scale = Vector2(0.8000012, 0.8000012)
 texture = ExtResource("22_s7g0b")
 
-[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/bocas/GridContainer/DecoItems/Area2D" index="0"]
-visible = false
-
 [node name="DecoItems2" parent="CanvasLayer/Control/panels/bocas/GridContainer" unique_id=403206726 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
@@ -427,9 +385,6 @@ anchor_right = 1.3066666
 anchor_bottom = 1.1066667
 scale = Vector2(0.72, 0.72)
 texture = ExtResource("23_mmfjm")
-
-[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/bocas/GridContainer/DecoItems2/Area2D" index="0"]
-visible = false
 
 [node name="DecoItems3" parent="CanvasLayer/Control/panels/bocas/GridContainer" unique_id=130935113 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
@@ -442,9 +397,6 @@ anchor_bottom = 1.2066667
 scale = Vector2(0.72, 0.72)
 texture = ExtResource("24_k8ld0")
 
-[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/bocas/GridContainer/DecoItems3/Area2D" index="0"]
-visible = false
-
 [node name="DecoItems4" parent="CanvasLayer/Control/panels/bocas/GridContainer" unique_id=416873400 groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
@@ -455,9 +407,6 @@ anchor_right = 1.5333333
 anchor_bottom = 1.1166667
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("25_mbb35")
-
-[node name="CollisionShape2D" parent="CanvasLayer/Control/panels/bocas/GridContainer/DecoItems4/Area2D" index="0"]
-visible = false
 
 [node name="Mask" type="Sprite2D" parent="." unique_id=961072092]
 position = Vector2(444, 80.75)

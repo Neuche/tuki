@@ -1,9 +1,11 @@
 extends Node2D
 
 @onready var sprite_adulto: Sprite2D = $Sprite2DAdulto
+@onready var sprite_adulta: Sprite2D = $Sprite2DAdulta
 @onready var sprite_chico: Sprite2D = $Sprite2DChico
 @onready var sprite_viejo: Sprite2D = $Sprite2DViejo
 @onready var mask_overlay_adulto: Sprite2D = $MaskOverlayAdulto
+@onready var mask_overlay_adulta: Sprite2D = $MaskOverlayAdulta
 @onready var mask_overlay_chico: Sprite2D = $MaskOverlayChico
 @onready var mask_overlay_viejo: Sprite2D = $MaskOverlayViejo
 
@@ -11,9 +13,9 @@ extends Node2D
 const ADULTO1_TEXTURE = preload("res://Assets/Changos/adulto1.png")
 const ADULTO2_TEXTURE = preload("res://Assets/Changos/adulto2.png")
 const ADULTO3_TEXTURE = preload("res://Assets/Changos/adulto3.png")
-const ADULTO4_TEXTURE = preload("res://Assets/Changos/adulto4.png")
-const ADULTO5_TEXTURE = preload("res://Assets/Changos/adulto5.png")
-const ADULTO6_TEXTURE = preload("res://Assets/Changos/adulto6.png")
+const ADULTA4_TEXTURE = preload("res://Assets/Changos/adulta4.png")
+const ADULTA5_TEXTURE = preload("res://Assets/Changos/adulta5.png")
+const ADULTA6_TEXTURE = preload("res://Assets/Changos/adulta6.png")
 const CHICO1_TEXTURE = preload("res://Assets/Changos/chico1.png")
 const CHICO2_TEXTURE = preload("res://Assets/Changos/chico2.png")
 const CHICO3_TEXTURE = preload("res://Assets/Changos/chico3.png")
@@ -44,20 +46,20 @@ var changuitos = [
 	{
 		"character": "res://dialogic/characters/adulto4.dch",
 		"timeline": "res://dialogic/timelines/adulto4_dialog.dtl",
-		"texture": ADULTO4_TEXTURE,
-		"type": "adulto"
+		"texture": ADULTA4_TEXTURE,
+		"type": "adulta"
 	},
 	{
 		"character": "res://dialogic/characters/adulto5.dch",
 		"timeline": "res://dialogic/timelines/adulto5_dialog.dtl",
-		"texture": ADULTO5_TEXTURE,
-		"type": "adulto"
+		"texture": ADULTA5_TEXTURE,
+		"type": "adulta"
 	},
 	{
 		"character": "res://dialogic/characters/adulto6.dch",
 		"timeline": "res://dialogic/timelines/adulto6_dialog.dtl",
-		"texture": ADULTO6_TEXTURE,
-		"type": "adulto"
+		"texture": ADULTA6_TEXTURE,
+		"type": "adulta"
 	},
 	{
 		"character": "res://dialogic/characters/chico1.dch",
@@ -104,6 +106,7 @@ func _ready() -> void:
 
 	# Debug: Print mask overlay positions
 	print("MaskOverlayAdulto position: ", mask_overlay_adulto.position)
+	print("MaskOverlayAdulta position: ", mask_overlay_adulta.position)
 	print("MaskOverlayChico position: ", mask_overlay_chico.position)
 	print("MaskOverlayViejo position: ", mask_overlay_viejo.position)
 
@@ -123,6 +126,7 @@ func handle_request_mode():
 
 	# Show only the sprite for the character type
 	sprite_adulto.visible = false
+	sprite_adulta.visible = false
 	sprite_chico.visible = false
 	sprite_viejo.visible = false
 
@@ -130,6 +134,9 @@ func handle_request_mode():
 		"adulto":
 			sprite_adulto.texture = selected.texture
 			sprite_adulto.visible = true
+		"adulta":
+			sprite_adulta.texture = selected.texture
+			sprite_adulta.visible = true
 		"chico":
 			sprite_chico.texture = selected.texture
 			sprite_chico.visible = true
@@ -150,6 +157,7 @@ func handle_delivery_mode() -> void:
 
 	# Show only the sprite for the character type
 	sprite_adulto.visible = false
+	sprite_adulta.visible = false
 	sprite_chico.visible = false
 	sprite_viejo.visible = false
 
@@ -157,6 +165,9 @@ func handle_delivery_mode() -> void:
 		"adulto":
 			sprite_adulto.texture = grateful_character.texture
 			sprite_adulto.visible = true
+		"adulta":
+			sprite_adulta.texture = grateful_character.texture
+			sprite_adulta.visible = true
 		"chico":
 			sprite_chico.texture = grateful_character.texture
 			sprite_chico.visible = true
@@ -171,6 +182,7 @@ func handle_delivery_mode() -> void:
 
 		# Hide all overlays first
 		mask_overlay_adulto.visible = false
+		mask_overlay_adulta.visible = false
 		mask_overlay_chico.visible = false
 		mask_overlay_viejo.visible = false
 
@@ -180,6 +192,9 @@ func handle_delivery_mode() -> void:
 			"adulto":
 				mask_overlay_adulto.texture = mask_texture
 				mask_overlay_adulto.visible = true
+			"adulta":
+				mask_overlay_adulta.texture = mask_texture
+				mask_overlay_adulta.visible = true
 			"chico":
 				mask_overlay_chico.texture = mask_texture
 				mask_overlay_chico.visible = true
@@ -214,6 +229,7 @@ func _on_gratitude_dialog_ended():
 
 	# Hide all masks
 	mask_overlay_adulto.visible = false
+	mask_overlay_adulta.visible = false
 	mask_overlay_chico.visible = false
 	mask_overlay_viejo.visible = false
 
@@ -230,6 +246,7 @@ func _on_gratitude_dialog_ended():
 
 	# Show only the sprite for the new character type
 	sprite_adulto.visible = false
+	sprite_adulta.visible = false
 	sprite_chico.visible = false
 	sprite_viejo.visible = false
 
@@ -237,6 +254,9 @@ func _on_gratitude_dialog_ended():
 		"adulto":
 			sprite_adulto.texture = new_character.texture
 			sprite_adulto.visible = true
+		"adulta":
+			sprite_adulta.texture = new_character.texture
+			sprite_adulta.visible = true
 		"chico":
 			sprite_chico.texture = new_character.texture
 			sprite_chico.visible = true

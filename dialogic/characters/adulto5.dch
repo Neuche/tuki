@@ -19,7 +19,7 @@
 &"portraits": {
 "default": {
 "export_overrides": {
-"image": "\"res://Assets/Changos/adulto5.png\""
+"image": "\"res://Assets/Changos/adulta5.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

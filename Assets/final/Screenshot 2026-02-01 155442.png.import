@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgv4nclddt4ue"
-path="res://.godot/imported/adulto4.png-7b931d40eb1c654051d6c6ba0b20075b.ctex"
+uid="uid://ciedsvmsm5che"
+path="res://.godot/imported/Screenshot 2026-02-01 155442.png-099a6bf74eb4eadd302f31def51d40ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Changos/adulto4.png"
-dest_files=["res://.godot/imported/adulto4.png-7b931d40eb1c654051d6c6ba0b20075b.ctex"]
+source_file="res://Assets/final/Screenshot 2026-02-01 155442.png"
+dest_files=["res://.godot/imported/Screenshot 2026-02-01 155442.png-099a6bf74eb4eadd302f31def51d40ff.ctex"]
 
 [params]
 

@@ -1,10 +1,22 @@
 [gd_scene format=3 uid="uid://yst88538r1jw"]
 
 [ext_resource type="Script" uid="uid://cah3ii58e2afg" path="res://scripts/button_seguir.gd" id="1_hhoem"]
-[ext_resource type="Script" path="res://scenes/level_complete.gd" id="2_lvlcmp"]
+[ext_resource type="Script" uid="uid://bi2otargahs5u" path="res://scenes/level_complete.gd" id="2_lvlcmp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4x1ak"]
 
 [node name="LevelComplete" type="Node2D" unique_id=374902180]
 script = ExtResource("2_lvlcmp")
+
+[node name="AnimatedSprite" type="Sprite2D" parent="." unique_id=1068902964]
+position = Vector2(960, 540)
+
+[node name="AnimationTimer" type="Timer" parent="." unique_id=2105784320]
+wait_time = 0.2
+autostart = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=979152862]
+sprite_frames = SubResource("SpriteFrames_4x1ak")
 
 [node name="Control" type="Control" parent="." unique_id=994688184]
 layout_mode = 3
@@ -22,9 +34,9 @@ text = "Nivel Completado"
 
 [node name="Button" type="Button" parent="Control" unique_id=69489996]
 layout_mode = 0
-offset_left = 730.0
-offset_top = 423.0
-offset_right = 1287.0
-offset_bottom = 711.0
+offset_left = 1631.0
+offset_top = 915.0
+offset_right = 1799.0
+offset_bottom = 1013.0
 text = "Start Again"
 script = ExtResource("1_hhoem")

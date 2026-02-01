@@ -21,6 +21,10 @@ script = ExtResource("3_c40vs")
 position = Vector2(603, 674)
 scale = Vector2(0.8, 0.8)
 
+[node name="Sprite2DAdulta" type="Sprite2D" parent="." unique_id=90194651]
+position = Vector2(603, 674)
+scale = Vector2(0.8, 0.8)
+
 [node name="Sprite2DChico" type="Sprite2D" parent="." unique_id=90194649]
 position = Vector2(603, 674)
 scale = Vector2(0.8, 0.8)
@@ -30,11 +34,15 @@ position = Vector2(603, 674)
 scale = Vector2(0.8, 0.8)
 
 [node name="MaskOverlayAdulto" type="Sprite2D" parent="." unique_id=1194571008]
-position = Vector2(595, 473)
+position = Vector2(518, 439)
+scale = Vector2(0.6, 0.6)
+
+[node name="MaskOverlayAdulta" type="Sprite2D" parent="." unique_id=1194571011]
+position = Vector2(599, 474)
 scale = Vector2(0.6, 0.6)
 
 [node name="MaskOverlayChico" type="Sprite2D" parent="." unique_id=1194571009]
-position = Vector2(644, 587)
+position = Vector2(619, 564)
 scale = Vector2(0.5, 0.5)
 
 [node name="MaskOverlayViejo" type="Sprite2D" parent="." unique_id=1194571010]
