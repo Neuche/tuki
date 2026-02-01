@@ -1,9 +1,52 @@
-[gd_scene load_steps=6 format=3 uid="uid://7sadffnbw365"]
+[gd_scene load_steps=14 format=3 uid="uid://7sadffnbw365"]
 
 [ext_resource type="Texture2D" uid="uid://b8p5wbcmjw1ed" path="res://Assets/layout idea.png" id="1_0dl0s"]
 [ext_resource type="PackedScene" uid="uid://gr0teld4vcrv" path="res://Scenes/AreaTrabajo/deco_items.tscn" id="2_kcjbq"]
+[ext_resource type="Texture2D" uid="uid://dspok4j1oqb2l" path="res://Assets/big windows.png" id="3_6u6e4"]
 [ext_resource type="Texture2D" uid="uid://borq25u3pfe56" path="res://Assets/mascara1.png" id="3_863jg"]
+[ext_resource type="Texture2D" uid="uid://6pxmxlxllgyj" path="res://Assets/window_mask.png" id="3_ise1y"]
 [ext_resource type="Script" uid="uid://w4mb0jcl67i2" path="res://Scenes/AreaTrabajo/area_2d.gd" id="4_6u6e4"]
+[ext_resource type="Texture2D" uid="uid://c0oomv5k0df3g" path="res://Assets/window_accessories.png" id="4_w4ilm"]
+[ext_resource type="Texture2D" uid="uid://cxs3l4x33yx7l" path="res://Assets/window_colors.png" id="5_cmw7w"]
+[ext_resource type="Texture2D" uid="uid://cjaqtgyyqxkka" path="res://Assets/window_eyes.png" id="6_dvpnx"]
+[ext_resource type="Texture2D" uid="uid://d2d7sj3dcc6ym" path="res://Assets/window_mouth.png" id="7_n0u45"]
+[ext_resource type="Texture2D" uid="uid://bn0c7jg6o0ok1" path="res://Assets/Iconos gratuitos de Serpiente diseñados por Freepik.jpg" id="9_cmw7w"]
+
+[sub_resource type="GDScript" id="GDScript_8x38w"]
+resource_name = "tabmanager"
+script/source = "extends VBoxContainer
+
+@onready var panels_container = $panels
+
+var panels: Array
+
+func _ready():
+	panels = panels_container.get_children()
+
+func show_tab(idx: int):
+	for panel in panels:
+		panel.hide()
+	
+	panels[idx].show()
+
+func _on_tab_1_pressed() -> void:
+	show_tab(0)
+
+
+func _on_tab_2_pressed() -> void:
+	show_tab(1)
+
+
+func _on_color_pressed() -> void:
+	show_tab(2)
+
+func _on_eyes_pressed() -> void:
+	show_tab(3)
+
+
+func _on_mouth_pressed() -> void:
+	show_tab(4)
+"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8x38w"]
 radius = 390.43643
@@ -24,14 +67,57 @@ texture = ExtResource("1_0dl0s")
 layer = 10
 follow_viewport_enabled = true
 
-[node name="SelectorItems" type="Panel" parent="CanvasLayer"]
-offset_left = -883.0
-offset_top = -271.0
-offset_right = -133.0
-offset_bottom = 479.0
+[node name="Control" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -884.0
+offset_top = -344.0
+offset_right = -2048.0
+offset_bottom = -543.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+script = SubResource("GDScript_8x38w")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Mask" type="Button" parent="CanvasLayer/Control/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_ise1y")
+
+[node name="Accessory" type="Button" parent="CanvasLayer/Control/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("4_w4ilm")
+
+[node name="Color" type="Button" parent="CanvasLayer/Control/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("5_cmw7w")
+
+[node name="Eyes" type="Button" parent="CanvasLayer/Control/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("6_dvpnx")
+
+[node name="Mouth" type="Button" parent="CanvasLayer/Control/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("7_n0u45")
+
+[node name="panels" type="Control" parent="CanvasLayer/Control"]
+layout_mode = 2
+
+[node name="SelectorItems" type="Panel" parent="CanvasLayer/Control/panels"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -12.0
+offset_right = 751.0
+offset_bottom = 738.0
 size_flags_horizontal = 0
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/SelectorItems"]
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/panels/SelectorItems"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -48,16 +134,143 @@ theme_override_constants/h_separation = 100
 theme_override_constants/v_separation = 100
 columns = 2
 
-[node name="DecoItems" parent="CanvasLayer/SelectorItems/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="DecoItems" parent="CanvasLayer/Control/panels/SelectorItems/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="DecoItems2" parent="CanvasLayer/SelectorItems/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="DecoItems2" parent="CanvasLayer/Control/panels/SelectorItems/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="DecoItems3" parent="CanvasLayer/SelectorItems/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="DecoItems3" parent="CanvasLayer/Control/panels/SelectorItems/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
-[node name="DecoItems4" parent="CanvasLayer/SelectorItems/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+[node name="DecoItems4" parent="CanvasLayer/Control/panels/SelectorItems/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+layout_mode = 2
+
+[node name="SelectorItems2" type="Panel" parent="CanvasLayer/Control/panels"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -12.0
+offset_right = 751.0
+offset_bottom = 738.0
+size_flags_horizontal = 0
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/panels/SelectorItems2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -350.0
+offset_right = 350.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 100
+columns = 2
+
+[node name="DecoItems" parent="CanvasLayer/Control/panels/SelectorItems2/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+layout_mode = 2
+
+[node name="deco" parent="CanvasLayer/Control/panels/SelectorItems2/GridContainer/DecoItems" index="0"]
+texture = ExtResource("3_6u6e4")
+expand_mode = 3
+
+[node name="DecoItems2" parent="CanvasLayer/Control/panels/SelectorItems2/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+layout_mode = 2
+
+[node name="deco" parent="CanvasLayer/Control/panels/SelectorItems2/GridContainer/DecoItems2" index="0"]
+texture = ExtResource("9_cmw7w")
+expand_mode = 3
+
+[node name="DecoItems3" parent="CanvasLayer/Control/panels/SelectorItems2/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+layout_mode = 2
+
+[node name="DecoItems4" parent="CanvasLayer/Control/panels/SelectorItems2/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+layout_mode = 2
+
+[node name="SelectorItems3" type="Panel" parent="CanvasLayer/Control/panels"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -12.0
+offset_right = 751.0
+offset_bottom = 738.0
+size_flags_horizontal = 0
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/panels/SelectorItems3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -350.0
+offset_right = 350.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 100
+columns = 2
+
+[node name="DecoItems" parent="CanvasLayer/Control/panels/SelectorItems3/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+layout_mode = 2
+
+[node name="DecoItems2" parent="CanvasLayer/Control/panels/SelectorItems3/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+layout_mode = 2
+
+[node name="DecoItems3" parent="CanvasLayer/Control/panels/SelectorItems3/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+layout_mode = 2
+
+[node name="DecoItems4" parent="CanvasLayer/Control/panels/SelectorItems3/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+layout_mode = 2
+
+[node name="SelectorItems4" type="Panel" parent="CanvasLayer/Control/panels"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -12.0
+offset_right = 751.0
+offset_bottom = 738.0
+size_flags_horizontal = 0
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/panels/SelectorItems4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -350.0
+offset_right = 350.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 100
+columns = 2
+
+[node name="DecoItems" parent="CanvasLayer/Control/panels/SelectorItems4/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+layout_mode = 2
+
+[node name="deco" parent="CanvasLayer/Control/panels/SelectorItems4/GridContainer/DecoItems" index="0"]
+texture = ExtResource("3_6u6e4")
+expand_mode = 3
+
+[node name="DecoItems2" parent="CanvasLayer/Control/panels/SelectorItems4/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+layout_mode = 2
+
+[node name="deco" parent="CanvasLayer/Control/panels/SelectorItems4/GridContainer/DecoItems2" index="0"]
+texture = ExtResource("9_cmw7w")
+expand_mode = 3
+
+[node name="DecoItems3" parent="CanvasLayer/Control/panels/SelectorItems4/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
+layout_mode = 2
+
+[node name="DecoItems4" parent="CanvasLayer/Control/panels/SelectorItems4/GridContainer" groups=["dropeable"] instance=ExtResource("2_kcjbq")]
 layout_mode = 2
 
 [node name="Mask" type="Sprite2D" parent="."]
@@ -69,7 +282,17 @@ texture = ExtResource("3_863jg")
 script = ExtResource("4_6u6e4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mask/Area2D"]
-position = Vector2(1.9376507, -1.6383436)
+position = Vector2(-7.750599, 5.85122)
 shape = SubResource("CapsuleShape2D_8x38w")
 
+[connection signal="pressed" from="CanvasLayer/Control/HBoxContainer/Mask" to="CanvasLayer/Control" method="_on_tab_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/HBoxContainer/Accessory" to="CanvasLayer/Control" method="_on_tab_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/HBoxContainer/Color" to="CanvasLayer/Control" method="_on_color_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/HBoxContainer/Eyes" to="CanvasLayer/Control" method="_on_eyes_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/HBoxContainer/Mouth" to="CanvasLayer/Control" method="_on_mouth_pressed"]
 [connection signal="area_entered" from="Mask/Area2D" to="Mask/Area2D" method="_on_area_entered"]
+
+[editable path="CanvasLayer/Control/panels/SelectorItems2/GridContainer/DecoItems"]
+[editable path="CanvasLayer/Control/panels/SelectorItems2/GridContainer/DecoItems2"]
+[editable path="CanvasLayer/Control/panels/SelectorItems4/GridContainer/DecoItems"]
+[editable path="CanvasLayer/Control/panels/SelectorItems4/GridContainer/DecoItems2"]
