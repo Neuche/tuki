@@ -17,3 +17,6 @@
 build/
 dist/
 export/
+
+# Local/Temporary files
+tukis.rar
