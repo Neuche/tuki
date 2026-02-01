@@ -7,15 +7,15 @@
 script = ExtResource("2_script")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=83143506]
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=90194648]
-position = Vector2(576, 324)
+position = Vector2(822, 552)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_changuito")
 
-[node name="MaskOverlay" type="Sprite2D" parent="."]
+[node name="MaskOverlay" type="Sprite2D" parent="." unique_id=1194571008]
+visible = false
 position = Vector2(585, 255)
 scale = Vector2(0.25, 0.25)
-visible = false
