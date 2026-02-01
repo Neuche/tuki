@@ -24,14 +24,6 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="Control" unique_id=51607875]
-layout_mode = 0
-offset_left = 937.0
-offset_top = 275.0
-offset_right = 1075.0
-offset_bottom = 298.0
-text = "Nivel Completado"
-
 [node name="Button" type="Button" parent="Control" unique_id=69489996]
 layout_mode = 0
 offset_left = 1631.0

@@ -2,7 +2,7 @@ extends Node
 
 # Global game state that persists across scenes
 var tareas_hechas: int = 0
-var tareas_objetivo: int = 3
+var tareas_objetivo: int = 1
 
 # Mask capture state
 var captured_mask_image: Image = null

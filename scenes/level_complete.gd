@@ -11,10 +11,10 @@ func _ready():
 
 	# Load all the frames
 	frames = [
-		load("res://Assets/final/Screenshot 2026-02-01 155348.png"),
-		load("res://Assets/final/Screenshot 2026-02-01 155417.png"),
-		load("res://Assets/final/Screenshot 2026-02-01 155431.png"),
-		load("res://Assets/final/Screenshot 2026-02-01 155442.png")
+		load("res://Assets/final/aa1.png"),
+		load("res://Assets/final/aa2.png"),
+		load("res://Assets/final/aa3.png"),
+		load("res://Assets/final/aa4.png")
 	]
 
 	# Set initial frame
