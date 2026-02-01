@@ -30,11 +30,11 @@ position = Vector2(603, 674)
 scale = Vector2(0.8, 0.8)
 
 [node name="MaskOverlayAdulto" type="Sprite2D" parent="." unique_id=1194571008]
-position = Vector2(522, 424)
+position = Vector2(595, 473)
 scale = Vector2(0.6, 0.6)
 
 [node name="MaskOverlayChico" type="Sprite2D" parent="." unique_id=1194571009]
-position = Vector2(623, 556)
+position = Vector2(615, 554)
 scale = Vector2(0.5, 0.5)
 
 [node name="MaskOverlayViejo" type="Sprite2D" parent="." unique_id=1194571010]
