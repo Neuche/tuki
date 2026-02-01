@@ -55,40 +55,33 @@ radius = 390.43643
 height = 780.87286
 
 [node name="AreaTrabajoMask" type="Node2D" unique_id=897135659]
+position = Vector2(956, 539)
 script = ExtResource("10_ctrl")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=854539096]
-position = Vector2(-1, 0)
-zoom = Vector2(0.6, 0.6)
-
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1539235130]
-offset_left = -961.0
-offset_top = -537.0
-offset_right = 959.0
-offset_bottom = 543.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_0dl0s")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1067227685]
 layer = 10
 
 [node name="TimerLabel" type="Label" parent="CanvasLayer" unique_id=315650509]
-offset_left = 442.0
-offset_top = -523.0
-offset_right = 918.0
-offset_bottom = -443.0
+offset_left = 1418.0
+offset_top = 12.0
+offset_right = 1894.0
+offset_bottom = 92.0
 theme_override_font_sizes/font_size = 47
 text = "Tiempo restante: 10s"
 
 [node name="Control" type="VBoxContainer" parent="CanvasLayer" unique_id=891917255]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -884.5
-offset_top = -336.0
-offset_right = -1281.5
-offset_bottom = -535.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 79.0
+offset_top = 197.0
+offset_right = 834.0
+offset_bottom = 997.0
 theme_override_constants/separation = 4
 script = SubResource("GDScript_8x38w")
 
@@ -328,10 +321,11 @@ scale = Vector2(1.0321782, 1.0681529)
 texture = ExtResource("3_863jg")
 
 [node name="Area2D" type="Area2D" parent="Mask" unique_id=1386345004]
+position = Vector2(0, -0.9361954)
 script = ExtResource("4_6u6e4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mask/Area2D" unique_id=1005565934]
-position = Vector2(2.9065056, -1.6383429)
+position = Vector2(2.9065056, 2.106439)
 shape = SubResource("CapsuleShape2D_8x38w")
 
 [connection signal="pressed" from="CanvasLayer/Control/HBoxContainer/Mask" to="CanvasLayer/Control" method="_on_tab_1_pressed"]
@@ -341,6 +335,7 @@ shape = SubResource("CapsuleShape2D_8x38w")
 [connection signal="pressed" from="CanvasLayer/Control/HBoxContainer/Mouth" to="CanvasLayer/Control" method="_on_mouth_pressed"]
 [connection signal="area_entered" from="Mask/Area2D" to="Mask/Area2D" method="_on_area_entered"]
 
+[editable path="CanvasLayer/Control/panels/SelectorItems/GridContainer/DecoItems"]
 [editable path="CanvasLayer/Control/panels/SelectorItems2/GridContainer/DecoItems"]
 [editable path="CanvasLayer/Control/panels/SelectorItems2/GridContainer/DecoItems2"]
 [editable path="CanvasLayer/Control/panels/SelectorItems4/GridContainer/DecoItems"]
