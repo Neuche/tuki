@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var timer_label = $CanvasLayer/TimerLabel
-var time_left = 20.0
+var time_left = 200.0
 var is_completing = false
 
 func _ready():

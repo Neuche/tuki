@@ -45,13 +45,10 @@ func _input(event: InputEvent) -> void:
 
 			#new_texture_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 			#new_texture_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-			var tamano_especifico = Vector2(100, 100)
 
 			new_texture_rect.texture = current_texture
 			var mouse_pos = get_global_mouse_position()
-			new_texture_rect.global_position = mouse_pos - (tamano_especifico / 2)
-			#new_texture_rect.custom_minimum_size = tamano_especifico
-			#new_texture_rect.size = tamano_especifico
+			new_texture_rect.global_position = mouse_pos
 
 		current_texture = null
 		current_source = null

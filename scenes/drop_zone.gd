@@ -11,9 +11,8 @@ func _drop_data(at_position, data):
 	new_texture.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	var tamano_especifico = Vector2(100, 100)
 	
-	new_texture.texture = data.texture
-	new_texture.custom_minimum_size = tamano_especifico
-	new_texture.size = tamano_especifico
+	var tex_size = data["texture"].get_size()
+	new_texture.size = tex_size
 	
 	# Center the texture on the mouse position (at_position is local to this control)
 	new_texture.position = at_position - (new_texture.size / 2)

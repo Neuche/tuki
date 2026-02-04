@@ -16,20 +16,22 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 	# Create a simple visual preview
 	var preview = TextureRect.new()
 	preview.texture = deco.texture
-	preview.custom_minimum_size = size
+	preview.pivot_offset_ratio = Vector2(0.5, 0.5)
+	preview.position = Vector2.ZERO
+	#preview.custom_minimum_size = size
 	preview.size = size
-	preview.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	preview.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	#preview.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	preview.stretch_mode = TextureRect.STRETCH_KEEP
 	preview.modulate.a = 0.7
-	# Offset so the preview is centered on the cursor
-	preview.position = -size / 2
 
 	set_drag_preview(preview)
+
 	# Return the texture and whether it's a base mask
 	return {"texture": deco.texture, "source": self, "is_base_mask": is_base_mask}
 
 func _process(delta: float) -> void:
 	# Move Area2D to follow mouse cursor during drag
+	# ESTO SOLO CAMBIA COLLISION SHAPE
 	if area_2d.has_meta("dragging") and area_2d.get_meta("dragging"):
 		area_2d.global_position = get_global_mouse_position()
 
