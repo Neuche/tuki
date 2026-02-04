@@ -39,16 +39,21 @@ script/source = "extends VBoxContainer
 @onready var panels_container = $panels
 
 var panels: Array
+var active_panel: int
 
 func _ready():
 	panels = panels_container.get_children()
-	show_tab(0)
+	active_panel = -1
+	show_tab(-1)
 
 func show_tab(idx: int):
+	active_panel = idx if (active_panel!=idx) else -1
+	
 	for panel in panels:
 		panel.hide()
 	
-	panels[idx].show()
+	if active_panel != -1:
+		panels[idx].show()
 
 func _on_tab_1_pressed() -> void:
 	show_tab(0)
