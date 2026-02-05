@@ -43,10 +43,15 @@ func _input(event: InputEvent) -> void:
 			var new_texture_rect = TextureRect.new()
 			add_child(new_texture_rect)
 
-			#new_texture_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-			#new_texture_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+			#new_texture_rect.pivot_offset_ratio = Vector2(0.5, 0.5)
 
 			new_texture_rect.texture = current_texture
+			new_texture_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+			var transform_texture : Vector2 = get_global_transform_with_canvas().get_scale()
+			new_texture_rect.size = current_texture.get_size() / transform_texture
+			
+			new_texture_rect.position = Vector2.ZERO
+			
 			var mouse_pos = get_global_mouse_position()
 			new_texture_rect.global_position = mouse_pos
 
